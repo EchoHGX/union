@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <g id="社区" transform="translate(22413 4088)">
+    <g id="组_2685" data-name="组 2685" transform="translate(-2110 14648)">
+      <g id="矩形_2745" data-name="矩形 2745" transform="translate(-20301 -18735)" fill="none" stroke="#121c33" stroke-width="4">
+        <path d="M22,0h0A22,22,0,0,1,44,22V44a0,0,0,0,1,0,0H22A22,22,0,0,1,0,22v0A22,22,0,0,1,22,0Z" stroke="none"/>
+        <path d="M22,2h0A20,20,0,0,1,42,22V41.933a.067.067,0,0,1-.067.067H22A20,20,0,0,1,2,22v0A20,20,0,0,1,22,2Z" fill="none"/>
+      </g>
+      <rect id="矩形_2746" data-name="矩形 2746" width="4" height="10" transform="translate(-20274 -18715) rotate(90)" fill="#121c33"/>
+    </g>
+    <rect id="矩形_2756" data-name="矩形 2756" width="48" height="48" transform="translate(-22413 -4088)" fill="none"/>
+  </g>
+</svg>

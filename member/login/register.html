@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telphone=no, email=no" />
+    <meta name="x5-page-mode" content="app">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="full-screen" content="yes">
+    <meta name="browsermode" content="application">
+    <title>用户注册</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <script src="../assets/js/fontsize.js"></script>
+    <Link href="../assets/css/basic.css" rel="stylesheet" />
+    <Link href="../assets/css/common.css" rel="stylesheet" />
+    <Link href="../assets/css/login.css" rel="stylesheet" />
+    <Link href="../assets/css/weui.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="m-page g-login">
+        <div class="m-header">
+            <div class="left">
+                <a href="javascript:history.go(-1)" class="back-icon"></a>
+            </div>
+            <div class="middle">
+                用户注册
+            </div>
+            <div class="right"></div>
+        </div>
+        <div class="m-main" style="background: #fff">
+            <div class="register-wrap">
+                <div class="register-form-box">
+                    <div class="register-tip">
+                        <p class="register-tip-error">
+                            <b>!</b>
+                            <span>账号或密码错误,请重新输入</span>
+                        </p>
+                    </div>
+                    <div class="register-f-block">
+                        <input type="text" class="input--100" placeholder="手机号码" id="user-phone" />
+                    </div>
+                    <div class="register-f-block">
+                        <input type="password" class="input--100" placeholder="输入密码" id="first_password" />
+                    </div>
+                    <div class="register-f-block">
+                        <input type="password" class="input--100" placeholder="确认密码" id="second_password" />
+                    </div>
+                    <div class="register-f-block phone-verify-group">
+                        <input type="password" class="" placeholder="输入手机验证码" />
+                        <a href="javascript:;" class="btn-phone-verify">获取手机验证码</a>
+                    </div>
+                    <div class="btn-box mt30">
+                        <a href="javascript:;" class="register">注册</a>
+                    </div>
+                </div>
+                <!-- 快速登录 -->
+                <!-- <div class="quick-logon mt50">
+                    <div class="guess-title">
+                        <h5>使用第三方账号登陆</h5>
+                    </div>
+                    <div class="quick-list">
+                        <a href="javascript:;" class="quick-item">
+                        <img src="../assets/images/icon-wx.png"/>
+                    </a>
+                        <a href="javascript:;" class="quick-item">
+                        <img src="../assets/images/icon-wx.png"/>
+                    </a>
+                        <a href="javascript:;" class="quick-item">
+                        <img src="../assets/images/icon-wx.png"/>
+                    </a>
+                    </div>
+                </div> -->
+            </div>
+            <p class="assign-tip">注册登录表示你已同意我们的&nbsp;<a href="javascript:void(0);">【会员注册协议】</a></p>
+        </div>
+    </div>
+</body>
+<script src="../assets/js/jquery.js"></script>
+<script src="../assets/js/weui.min.js"></script>
+<script>
+$(function() {
+    //号码输入
+    $('#user-phone').on('input', function() {
+        var _t = $(this);
+        //隐藏错误信息
+        $('.register-tip-error').hide();
+
+        if (_t.val().length > 11) {
+            _t.val(_t.val().slice(0, 11));
+        }
+
+    })
+
+    //手机号码失去焦点检查
+    $('#user-phone').on('blur', function() {
+
+        var _t = $(this);
+        var val = _t.val();
+
+        if (!isMobile(val)) {
+
+            if (val == undefined || val == '') {
+                $('.register-tip-error span').html('手机号码不能为空！');
+            } else {
+                $('.register-tip-error span').html('手机号码格式不对请检查！');
+            }
+            $('.register-tip-error').show();
+            // $('#user-phone').focus();
+        }
+
+    });
+
+    //获取验证码
+    $('.btn-phone-verify').click(function() {
+        var _t = $(this);
+        if (_t.hasClass('disabled')) {
+            return;
+        }
+        var phone = $('#user-phone').val();
+
+        //验证为11为11个数字的号码
+        if (isMobile(phone)) {
+
+            //服务器返回code
+            var data = { code: 200 };
+
+            if (data.code == 200) {
+                var countDown = 60;
+                var timer = setInterval(function() {
+                    --countDown;
+                    _t.html(countDown + ' s后可重新获取');
+
+                    if (countDown <= 0) {
+                        clearInterval(timer);
+                        _t.html("获取手机验证码").removeClass("disabled");
+                        return;
+                    }
+                    _t.addClass('disabled');
+                }, 1000);
+            }
+
+
+        } else {
+            //当不是长度不为11的数字时
+            if (phone == '' || phone == undefined) {
+                $('.register-tip-error span').html('手机号码不能为空！');
+            } else {
+                $('.register-tip-error span').html('手机号码格式不对请检查！');
+            }
+            $('.register-tip-error').show();
+            $('#user-phone').focus();
+            return;
+
+        }
+
+
+    });
+
+})
+
+function isMobile(str_data) {
+    str_data = str_data || String(this);
+    var length = str_data.length;
+    return length == 11 && /^1\d{10}$/.test(str_data);
+}
+</script>
+
+</html>

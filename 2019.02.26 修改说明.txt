@@ -1,0 +1,45 @@
+12/26 以下文件有修改有修改
+member/assets/js/wordList.js
+member/homepage/jigou_user_mana.html
+member/homepage/jigou_user_sale.html
+member/user/user_list.html
+member/user/user_list_mana.html
+member/user/user_list_sale.html
+
+
+12/27 修改情况
+添加
+shop/tips/*						页面提示
+member/score/*        评分
+对css文件有修改,如果没有改动css文件，可直接覆盖之前的css文件
+
+
+
+2019/01/04修改说明
+member/user/user.html
+shop/classify/classify.html			
+
+对css文件有修改,如果没有改动css文件，可直接覆盖之前的css文件
+
+
+shop/detail/investment_detail_new.html			新版理财详情页面
+shop/classify/classify_label_edit.html			编辑领域标签
+shop/classify/classify_label_list.html			领域标签列表
+
+
+
+
+2019/01/16修改
+添加
+member/homepage/person_post.html				个人中心帖子
+
+修改
+member/assets/css/homepage.css
+shop/item/item_type.html
+shop/assets/css/basic.css
+
+
+
+2019/02/26 修改
+添加文件
+shop/detail(goods,index)下的中文命名的文件

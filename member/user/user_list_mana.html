@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>成员管理</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  <meta name="x5-page-mode" content="app">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="full-screen" content="yes">
+  <meta name="browsermode" content="application">
+	<link rel="stylesheet" href="../assets/css/basic.css">
+	<link rel="stylesheet" href="../assets/css/user.css">
+</head>
+<body class="cBg">
+<div class="fixtop">
+  <div class="m-header bordern">
+    <div class="left">
+        <a href="javascript:history.go(-1)" class="back-icon"></a>
+    </div>
+    <div class="middle">
+        成员管理
+    </div>
+    <div class="right">
+      <a class="go_search" href="javascript:void(0);"></a>
+    </div>
+  </div>
+  <div class="search_input flexr pl15 pr15">
+    <div class="input_box">
+      <img src="../assets/images/sea.png">
+      <input type="text" name="serach" placeholder="搜索通讯录中的成员">
+    </div>
+    <a class="cancel" href="javascript:void(0);">取消</a>
+  </div>
+</div>
+<main class="cBg cleartop">
+	<div class="list_mana_tab flexr">
+		<a class="tab_link active" href="javascript:void(0);">管理员</a>
+		<a class="tab_link" href="javascript:void(0);">业务员</a>
+	</div>
+
+  <div id="list-wrapper">
+    <ul class="user_list handle">
+      
+    </ul>
+    <ul class="user_nav">
+      
+    </ul>
+  </div>
+</main>
+</body>
+<script src="../assets/js/jquery.js"></script>
+<script src="../assets/js/fontsize.js"></script>
+<script src="../assets/js/wordList.js"></script>
+<script>
+  $(function(){
+    
+    $(".go_search").click(function(){
+      $(".search_input").css("display","flex");
+    });
+
+    $(".search_input .cancel").click(function(){
+      $(".search_input").css("display","none");
+    });
+
+    // 管理员列表数据
+    var data = [
+        {
+          label: 'A',
+          lists: [
+            {
+              id: 'A1',
+              name: 'a-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'管理员'
+            },
+            {
+              id: 'A2',
+              name: 'a-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'管理员'
+            },
+            {
+              id: 'A3',
+              name: 'a-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'管理员'
+            },
+            {
+              id: 1,
+              name: 'a-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'管理员'
+            },
+            {
+              id: 1,
+              name: 'a-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'管理员'
+            }
+          ]
+        },
+        {
+          label: 'B',
+          lists: [
+            {
+              id: 1,
+              name: 'b-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'管理员'
+            },
+            {
+              id: 1,
+              name: 'b-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'管理员'
+            },
+            {
+              id: 1,
+              name: 'b-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'管理员'
+            },
+            {
+              id: 1,
+              name: 'b-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'管理员'
+            },
+            {
+              id: 1,
+              name: 'b-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'管理员'
+            }
+          ]
+        },
+        {
+          label: 'C',
+          lists: [
+            {
+              id: 1,
+              name: 'c-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'管理员'
+            },
+            {
+              id: 1,
+              name: 'c-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'管理员'
+            },
+            {
+              id: 1,
+              name: 'c-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'管理员'
+            },
+            {
+              id: 1,
+              name: 'c-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'管理员'
+            },
+            {
+              id: 1,
+              name: 'c-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'管理员'
+            }
+          ]
+        },
+        {
+          label: 'D',
+          lists: [
+            {
+              id: 1,
+              name: 'd-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'管理员'
+            },
+            {
+              id: 1,
+              name: 'd-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'管理员'
+            },
+            {
+              id: 1,
+              name: 'd-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'管理员'
+            },
+            {
+              id: 1,
+              name: 'd-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'管理员'
+            },
+            {
+              id: 1,
+              name: 'd-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'管理员'
+            }
+          ]
+        },
+        {
+          label: 'E',
+          lists: [
+            {
+              id: 1,
+              name: 'e-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'管理员'
+            },
+            {
+              id: 1,
+              name: 'e-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'管理员'
+            },
+            {
+              id: 1,
+              name: 'e-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'管理员'
+            },
+            {
+              id: 1,
+              name: 'e-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'管理员'
+            },
+            {
+              id: 1,
+              name: 'e-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'管理员'
+            }
+          ]
+        },
+        {
+          label: 'F',
+          lists: [
+            {
+              id: 1,
+              name: 'f-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'管理员'
+            },
+            {
+              id: 1,
+              name: 'f-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'管理员'
+            },
+            {
+              id: 1,
+              name: 'f-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'管理员'
+            },
+            {
+              id: 1,
+              name: 'f-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'管理员'
+            },
+            {
+              id: 1,
+              name: 'f-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'管理员'
+            }
+          ]
+        }
+    ];
+    $.indexedList({
+         el: '.user_list', //主列表DOM [选填，默认值：.indexed-list]
+         elNav: '.user_nav', //右侧列表DOM [选填，默认值：.indexed-nav]
+         datas: data, //自定义的数据 [必填，默认为空数组]
+         showDetail: true
+    });
+  })
+</script>
+<script>
+  $(function(){
+    var el,oldel,touchStart = 0,touchEnd = 0,touchW = 0,hendW = $(".user_list li .del").width();
+    $(".user_list").on("touchstart","li dd",function(e){
+      touchStart = e.originalEvent.changedTouches[0].pageX;
+      el = $(this);
+      el.siblings("dd").animate({marginLeft:"0"},300).removeClass("active");
+    });
+
+    $(".user_list").on("touchmove","li dd",function(e){
+      if(el.hasClass("active")){
+        return false;
+      }
+      touchEnd = e.originalEvent.changedTouches[0].pageX;
+      touchW =  touchEnd - touchStart;
+      if(touchW < 0 && touchW > -hendW){
+        el.css("margin-left",touchW + "px");
+      }
+    });
+
+    $(".user_list").on("touchend","li dd",function(e){
+      $(this).off('touchmove');
+      if(touchW <  -30){
+        el.animate({marginLeft: -hendW +"px"},300)
+        el.addClass("active");
+      }else{
+        el.animate({marginLeft: "0px"},300).removeClass("active");
+      }
+      touchStart = 0,
+      touchEnd = 0;
+      touchW = 0;
+    });
+    
+    $(".user_list").on("click","li .del",function(){
+      var idx = $(this).attr("data-id");
+      alert(idx);
+    });
+  });
+</script>
+</html>

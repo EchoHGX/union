@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  <meta name="x5-page-mode" content="app">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="full-screen" content="yes">
+  <meta name="browsermode" content="application">
+  <title>邀请好友</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <script src="../assets/js/fontsize.js"></script>
+  <link href="../assets/css/basic.css" rel="stylesheet" />
+  <link href="../assets/css/share.css" rel="stylesheet" />
+</head>
+<body class="cBgf">
+<main>
+  <div class="share_top">
+    <img class="logo" src="../assets/images/new/s_logo.svg">
+    <img class="title" src="../assets/images/new/s_title.svg">
+    <img class="subtitle" src="../assets/images/new/s_subtitle.svg">
+    <img class="left_icon" src="../assets/images/new/s_l.svg">
+    <img class="right_icon" src="../assets/images/new/s_r.svg">
+  </div>
+  <div class="share_cont">
+    <div class="cont">
+      <div class="code">
+        <img src="../assets/images/new/code.png">
+      </div>
+      <p class="fS10 fC2 t_center" style="margin-top: -0.597rem;">让好友扫码即可邀请</p>
+      <a href="javascript:void(0);" class="share_btn" id="save_code">保存邀请码</a>
+      <p class="tips">
+        <span>快速分享给好友</span>
+      </p>
+      <div class="s_link flexr">
+        <a href="javascript:void(0);">
+          <img src="../assets/images/new/s_wx.svg">
+          <p>微信好友</p>
+        </a>
+        <a href="javascript:void(0);">
+          <img src="../assets/images/new/s_ac.svg">
+          <p>朋友圈</p>
+        </a>
+      </div>
+    </div>
+    <a href="http://junnet.net" class="skill_link">Copyright © 2018-2018 家办联盟 版权所有<br/>京ICP备123456789号,由 junnet.net 提供技术服务</a>
+  </div>
+</main>
+<div class="shart_tips_alert">
+  <div class="sta_cont">
+    <div class="sta_item item1">
+      <p class="title">1、点击右上角</p>
+      <img class="img1" src="../assets/images/new/sa2.svg">
+      <img class="img2" src="../assets/images/new/sa3.svg">
+    </div>
+    <div class="sta_item">
+      <p class="title">2、选择分享的方式，即可向好友发送邀请链接</p>
+      <img class="img" src="../assets/images/new/sa4.svg">
+    </div>
+    <div class="sta_item">
+      <p class="title">3、好友点击你分享的链接即可加入家办联盟哦~</p>
+      <img class="img" src="../assets/images/new/sa5.svg">
+    </div>
+    <a href="javascript:void(0);" class="btn"></a>
+  </div>
+</div>
+<div class="down_element" style="display: none;">
+  <a href="javascript:void(0);" class="down_a" download="jblm.png" href=""></a>
+  <div class="down_cont" id="cont">
+    <div class="share_top">
+      <img class="logo" src="../assets/images/new/s_logo.svg">
+      <img class="title" src="../assets/images/new/s_title.svg">
+      <img class="subtitle" src="../assets/images/new/s_subtitle.svg">
+      <img class="left_icon" src="../assets/images/new/s_l.svg">
+      <img class="right_icon" src="../assets/images/new/s_r.svg">
+    </div>
+    <div class="share_cont">
+      <div class="cont">
+        <div class="avatar">
+          <img src="../assets/images/test_logo.png">
+        </div>
+        <p class="fS10 fC1 t_center" style="margin-top: -0.597rem;">分享者昵称</p>
+        <p class="fS14 fC1 t_center mt15" class="info">您的好友【靳继科-汇盛家族】邀请你<br/>加入家办联盟啦~</p>
+        <span class="line"></span>
+        <p class="desc">国内首个B2B专业服务社交电商系统平台，围绕家族为代表的高端客户需求对接各类专业服务、产品、方案、资源，亮出您的业务，合作客户找上来！</p>
+        <img class="down_code mt10" src="../assets/images/new/code.png">
+        <p class="t_center fCStr fC10 mt5">长按或扫码即可加入</p>
+      </div>
+      <a href="http://junnet.net" class="skill_link" style="margin-top: 1rem;">Copyright © 2018-2018 家办联盟 版权所有<br/>京ICP备123456789号,由 junnet.net 提供技术服务</a>
+    </div>
+  </div>
+</div>
+<a href="javascript:void(0);" class="down_a"></a>
+</body>
+<script src="../assets/js/jquery.js"></script>
+<script src="../assets/js/html2canvas.js"></script>
+<script src="../assets/js/Canvas2Image.js"></script>
+<script>
+  $(function(){
+    var element = $("#cont")[0];
+    var img_cont = $(".img_cont")[0];
+    $("#save_code").click(function(){
+      $(".down_element").show();
+        html2canvas(element).then(canvas => {
+          // $('#cont').html(canvas);
+          var canvasW = canvas.width;
+          var canvasH = canvas.height;
+          var img = Canvas2Image.convertToImage(canvas, canvasW, canvasH);
+
+          // imgData = canvas.toDataURL('image/png').replace("image/png","image/octet-stream");;
+          Canvas2Image.saveAsImage(canvas, canvasW, canvasH, "png", "jblm");
+          setTimeout(function(){
+            $(".down_element").hide();
+          },3000);
+          // var newData = imgData.replace(/^data:image\/png/, "data:application/octet-stream");
+          // $(".down_a").attr("download","w3logo").attr("href", newData);
+
+          // window.location.href=imgData
+         // img_cont.appendChild(canvas);
+        })
+    });
+    
+
+
+    $(".shart_tips_alert .sta_cont .btn").click(function(){
+      $(".shart_tips_alert").hide();
+    });
+  });
+</script>
+</html>

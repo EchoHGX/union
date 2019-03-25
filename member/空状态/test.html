@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>空状态</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  <meta name="x5-page-mode" content="app">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="full-screen" content="yes">
+  <meta name="browsermode" content="application">
+	<link rel="stylesheet" href="../assets/css/basic.css">
+  <script src="../assets/js/jquery.js"></script>
+  <script src="../assets/js/fontsize.js"></script>
+  <style>
+    .alert_wrap{
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+    .alert_wrap .alert_bg{
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,.6);
+    }
+    .alert_wrap .alert_cont{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      width: 13rem;
+      background: #fff;
+      border-radius: 6px;
+    }
+    .alert_wrap .alert_btn_wrap{
+      width: 100%;
+      height: 2.133rem;
+      border-top: 1px solid #e5e5e5;
+    }
+    .alert_wrap .alert_btn_wrap .cancel{
+      display: block;
+      width: 50%;
+      line-height: 2.133rem;
+      text-align: center;
+      border-right: 1px solid #e5e5e5;
+      font-size: .64rem;
+      color: #929FAD;
+      float: left;
+    }
+    .alert_wrap .alert_btn_wrap .sure{
+      display: block;
+      width: 50%;
+      line-height: 2.133rem;
+      text-align: center;
+      font-size: .64rem;
+      color: #387BE6;
+      float: right;
+    }
+    .alert_wrap .form{
+      display: block;
+      width: 100%;
+      padding-left: .64rem;
+      padding-right: .64rem;
+      max-height: 17.067rem;
+      overflow-y: scroll;
+    }
+    .alert_wrap .form .form_item{
+      width: 100%;
+      height: 2.133rem;
+      line-height: 2.133rem;
+      border-bottom: 1px solid #e5e5e5;
+    }
+    .alert_wrap .form .form_item:nth-last-of-type(1){
+      border-bottom: 0;
+    }
+    .alert_wrap .form .form_item .label{
+      display: block;
+      float: left;
+      width: 20%;
+      line-height: 2.133rem;
+      font-size: .597rem;
+      color: #666;
+      background: none;
+    }
+    .alert_wrap .form .form_item input{
+      display: block;
+      float: left;
+      width: 80%;
+      line-height: 2.133rem;
+      outline: none;
+      border: none;
+      color: #121C33;
+      font-size: .597rem;
+      background: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="alert_wrap">
+    <div class="alert_bg" onclick="$('.alert_wrap').hide();"></div>
+    <div class="alert_cont">
+      <form class="form" id="#alertform" action="./index.html">
+        <div class="form_item">
+          <p class="label">姓名:</p>
+          <input type="text" name="" placeholder="输入你的姓名">
+        </div>
+        <div class="form_item">
+          <p class="label">姓名:</p>
+          <input type="text" name="" placeholder="输入你的姓名">
+        </div>
+        <div class="form_item">
+          <p class="label">姓名:</p>
+          <input type="text" name="" placeholder="输入你的姓名">
+        </div>
+      </form>
+      <div class="alert_btn_wrap">
+        <a href="javascript:void(0);" class="cancel" onclick="$('.alert_wrap').hide();">取消</a>
+        <a href="javascript:void(0);" class="sure" onclick="$('#alertform').submit();">确定</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

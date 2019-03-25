@@ -1,0 +1,339 @@
+@charset "UTF-8";
+
+/*
+*		登陆
+*/
+
+@import "basic.scss";
+
+.logo_head{
+	width: 100%;
+	height: 8.363rem;
+	background: linear-gradient(180deg,rgba(82,175,234,1) 0%,rgba(60,97,222,1) 100%);
+	.head_content{
+		width: 100%;
+		.logo{
+			display: block;
+			width: 2.304rem;
+			height: 2.304rem;
+			box-shadow:0 3px 10px rgba(0,0,0,0.08);
+			margin: .853rem auto;
+			border-radius: .427rem;
+		}
+	}
+}
+
+.header{
+	width: 100%;
+	height: 46px;
+	.head_left{
+		display: block;
+		width: 75px;
+		height: 100%;
+		padding-left: 15px;
+		padding-top: 10px;
+		img{
+			width: 24px;
+			height: 24px;
+		}
+	}
+	.head_right{
+		width: 75px;
+		height: 100%;
+		display: block;
+	}
+	.head_mid{
+		flex: 1;
+		text-align: center;
+		line-height: 46px;
+		font-size: 16px;
+	}
+}
+
+.logo_form{
+	width: 92%;
+	box-shadow:0 .427rem .64rem rgba(56,123,230,0.1);
+	border-radius: .427rem;
+	margin-top: -2.048rem;
+	form{
+		width: 100%;
+		height: 100%;
+		border-radius: .427rem;
+		background: #fff;
+		padding-left: .512rem;
+		padding-right: .512rem;
+	}
+	.caption{
+		width: 100%;
+		line-height: .853rem;
+		text-align: center;
+		color: $fC1;
+		font-size: $fS14;
+	}
+	.form_item{
+		width: 100%;
+		height: 46px;
+		border-radius: 0.213rem;
+		background: $cBgInput;
+		input{
+			width: 100%;
+			height: 100%;
+			border-radius: 0.213rem;
+			background: $cBgInput;
+			border: none;
+			outline: none;
+			font-size: $fS12;
+			&:placeholder{
+				color: $fC2;
+			}
+		}
+	}
+	.forget_pwd{
+		flex: 1;
+		text-align: right;
+		font-size: $fS12;
+		color: $fC2;
+		line-height: .725rem;
+	}
+	.register{
+		font-size: $fS12;
+		color: $fC2;
+		line-height: .725rem;
+	}
+	.submit{
+		width: 100%;
+		height: 1.963rem;
+		border-radius: 0.213rem;
+		text-align: center;
+		line-height: 1.963rem;
+		background: $cBgStr;
+		border: none;
+		outline: none;
+	}
+}
+
+.auto_login{
+	display: block;
+	width: 45%;
+	line-height: 0.725rem;
+	color: $fC2;
+	font-size: $fS12;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	margin-top: .853rem;
+	span{
+		display: inline-block;
+		margin: 0 auto;
+		white-space: nowrap;
+	}
+	&:after{
+		content: '';
+		width: 1.28rem;
+		height: 1px;
+		background: $cLine;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+	}
+	&:before{
+		content: '';
+		width: 1.28rem;
+		height: 1px;
+		background: $cLine;
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+	}
+}
+
+.other_login{
+	justify-content: center;
+	.wx_login{
+		display: block;
+		width: 1.707rem;
+		height: 1.707rem;
+		margin-right: 1.28rem;
+	}
+	.qq_login{
+		display: block;
+		width: 1.707rem;
+		height: 1.707rem;
+	}
+	img{
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.rule{
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-size: .512rem;
+	color: $fC2;
+}
+
+
+
+.login-wrap, .register-wrap, .password-wrap {
+    padding: 1rem 0;
+}
+
+.login-form-box, .register-form-box, .password-form-box {
+    padding: 0 1.9169rem;
+}
+
+.login-f-block, .register-f-block, .password-f-block {
+    background: #fff;
+    width: 100%;
+    margin-top: 10px;
+}
+.login-f-block input, .register-f-block input, .password-f-block input {
+    height: 1.7891rem;
+    font-size: 14px;
+    border: none;
+    border-bottom: 1px solid #e8e8e8;
+    color: #333;
+    outline:none;
+    padding:0 0.426rem;
+    width:100%;
+}
+.form-note {
+	margin-top:0.639rem;
+    color: #666;
+    font-size: .6rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+.form-note .link-register{
+	font-size: .5112rem;
+	color:#007AFF;
+}
+.form-note .f-right .flw-pas {
+    font-size: 0.5112rem;
+    color: #666;
+  
+}
+.form-note .f-right .flw-pas em{
+	  font-style: normal;
+}
+.btn-box {
+    display: block;
+    width: 100%;
+    margin-top:1.278rem;
+}
+.btn-box .register{
+	display: block;
+	width: 100%;
+	height: 1.963rem;
+	background: $fCStr;
+	border-radius: .213rem;
+	line-height: 1.963rem;
+	font-size: $fS14;
+	color: #fff;
+	text-align: center;
+}
+
+.login-wrap .login-btn, .register-wrap .register-btn, .password-wrap .password-btn {
+  
+    width: 100%;
+    margin: auto;
+    -moz-border-radius: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+    font-size: 0.6816rem;
+}
+
+.login-btn, .register-btn, .password-btn {
+    display: block;
+    width: 100%;
+    height: 1.8rem;
+    line-height: 1.8rem;
+    -moz-border-radius: .1rem;
+    background: $cBgStr;
+    color: #fff;
+}
+.login-btn a, .register-btn a, .password-btn a{
+	display: block;
+	color:#fff;
+}
+.quick-logon {
+    padding: 0 1.9169rem;
+    text-align: center;
+    margin-top:2.1299rem;
+}
+
+.guess-title {
+    position: relative;
+    text-align: center;
+    color: #999;
+}
+.guess-title h5 {
+    font-size: 0.5112rem;
+}
+
+.quick-list {
+    margin-top: 0.852rem;
+    width: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
+.quick-list .quick-item {
+    width: 1.8743rem;
+    height: 1.8743rem;
+    overflow: hidden;
+}
+.quick-list .quick-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.assign-tip {
+    padding: 0 1.9169rem;
+    font-size: 0.5112rem;
+    color: #999;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.assign-tip a {
+    color: #333;
+}
+
+.phone-verify-group {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.phone-verify-group .btn-phone-verify {
+    width: 6.3898rem;
+    text-align: center;
+    font-size: 0.5112rem;
+    color: #333;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    padding: 8px 0;
+    border-radius: 999px;
+    border: 1px solid #eee;
+    margin-left: 15px;
+    background: #f8f8f8;
+}
+.m-form-tip .m-form-tip-error, .login-wrap .login-tip .login-tip-error, .register-wrap .register-tip .register-tip-error, .password-wrap .password-tip .password-tip-error {
+    font-size: 0.5112rem;
+    line-height: 0.7668rem;
+    color: #FE5A5B;
+    display: none;
+}

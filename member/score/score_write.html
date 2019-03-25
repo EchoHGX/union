@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>信用评分</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  <meta name="x5-page-mode" content="app">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="full-screen" content="yes">
+  <meta name="browsermode" content="application">
+	<link rel="stylesheet" href="../assets/css/basic.css">
+	<link rel="stylesheet" href="../assets/css/score.css">
+</head>
+<body class="cBg">
+<div class="m-header index5 bordern">
+  <div class="left">
+      <a href="javascript:history.go(-1)" class="back-icon"></a>
+  </div>
+  <div class="middle">
+      信用评分
+  </div>
+  <div class="right"></div>
+</div>
+<main class="pl15 pr15 pt20"> 
+  <div class="swrite_cont">
+  	<img class="lt_avatar" src="../assets/images/avatar.png">
+    <p>您对本次的项目受理方服务如何评价？</p>
+    <p class="fS12 fC2 mt10">选择以下方式给予对方信用评分</p>
+    <div class="flexr pl10 mt30" data-stars="3">
+      <a class="star active" href="javascript:void(0);">
+        <img class="star_y" src="../assets/images/star_y.png">
+        <img class="star_n" src="../assets/images/star_n.png">
+      </a>
+      <a class="star active" href="javascript:void(0);">
+        <img class="star_y" src="../assets/images/star_y.png">
+        <img class="star_n" src="../assets/images/star_n.png">
+      </a>
+      <a class="star active" href="javascript:void(0);">
+        <img class="star_y" src="../assets/images/star_y.png">
+        <img class="star_n" src="../assets/images/star_n.png">
+      </a>
+      <a class="star" href="javascript:void(0);">
+        <img class="star_y" src="../assets/images/star_y.png">
+        <img class="star_n" src="../assets/images/star_n.png">
+      </a>
+      <a class="star" href="javascript:void(0);">
+        <img class="star_y" src="../assets/images/star_y.png">
+        <img class="star_n" src="../assets/images/star_n.png">
+      </a>
+      <a class="fCH num pt10"><span>60</span>分</a>
+    </div>
+    <textarea class="input_wrap" placeholder="说点什么？"></textarea>
+    <a class="suc_btn" href="javascript:void(0);">提交评分完成项目</a>
+  </div>
+</main>
+</body>
+<script src="../assets/js/fontsize.js"></script>
+<script src="../assets/js/jquery.js"></script>
+<script>
+	$(function(){
+		$(".star").click(function(){
+			var star = $(this).index();
+			$(this).addClass("active").prevAll().addClass("active");
+			$(this).nextAll().removeClass("active");
+			$(this).siblings(".num").find("span").html((star + 1) * 20)
+		});
+	});
+</script>
+</html>

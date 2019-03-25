@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  <meta name="x5-page-mode" content="app">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="full-screen" content="yes">
+  <meta name="browsermode" content="application">
+  <title>分类</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <script src="../assets/js/fontsize.js"></script>
+  <link href="../assets/css/basic.css" rel="stylesheet" />
+  <link href="../assets/css/list_new.css" rel="stylesheet" />
+  <link href="../assets/css/classify_new.css" rel="stylesheet" />
+  <style>
+    .classify_sub_tab:after{
+      display: block;
+      content: ' ';
+      height: 60px;
+      position: relative;
+      padding-left: 2.56rem;
+    }
+    .classify_sub_tab .classify_sub_item:nth-last-of-type(1){
+      margin-right: 0;
+    }
+  </style>
+</head>
+<body>
+<main class="cBg">
+  <div class="classify_head">
+      <a class="search_link" href="javascript:void(0);">
+      	<img src="../assets/images/search.png">
+      	<input type="text" name="" placeholder="请键入搜索您需要的项目、机构、活动等" readonly>
+      </a>
+  </div>
+  <div class="classify_tab flexr cleartop">
+  	<a class="classity_tab_item active" href="javascript:void(0);">国内业务</a>
+  	<a class="classity_tab_item" href="javascript:void(0);">海外业务</a>
+    <a class="golab" href="javascript:void(0);">编辑领域</a>
+  </div>
+
+  <div class="classify_tab_wrap">
+    <div class="classify_sub_tab flexr">
+      <a class="classify_sub_item" href="javascript:void(0);">全部</a>
+      <a class="classify_sub_item" href="javascript:void(0);">资金投资</a>
+      <a class="classify_sub_item" href="javascript:void(0);">项目融资</a>
+      <a class="classify_sub_item" href="javascript:void(0);">理财投资</a>
+      <a class="classify_sub_item" href="javascript:void(0);">保险</a>
+      <a class="classify_sub_item" href="javascript:void(0);">保富规划</a>
+      <a class="classify_sub_item active" href="javascript:void(0);">资产配置</a>
+    </div>
+    <a class="go_class_label" href="javascript:void(0);"></a>
+  </div>
+	
+	<!-- 新分类 -->
+  <div class="classify_cont cBgf">
+  	<div class="banner">
+  		<img src="../assets/images/new/cban.png">
+  	</div>
+  	<div class="classify_floor pl15">
+			<div class="floor_item">
+				<div class="good_list">
+          <div class="pr15 pt20 pb20 borderl">
+            <a class="item_wrap flexr" href="javascript:void(0);">
+              <img class="item_img_i big" src="../assets/images/new/img1.png">
+              <div class="item_desc_i">
+                <h3 class="item_name ellipsis">国际注册私人财富管理师考前辅导</h3>
+                <div class="item_info mt10 flexr">
+                  <span>证券理财</span>
+                  <span>64%</span>
+                  <span>6.2%</span>
+                  <span>无限期</span>
+                </div>
+                <div class="mt10 label_list">
+                  <div class="flexr">
+                      <span>财富管理</span>
+                      <span>管理</span>
+                      <span>财富</span>
+                      <span>财富管理</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+					<div class="pr15 pt20 pb20 borderl">
+            <a class="item_wrap flexr" href="javascript:void(0);">
+              <img class="item_img_i" src="../assets/images/test_logo.png">
+              <div class="item_desc_i">
+                <h3 class="item_name ellipsis">国际注册私人财富管理师考前辅导</h3>
+                <div class="item_info mt10 flexr">
+                  <span>证券理财</span>
+                  <span>64%</span>
+                  <span>6.2%</span>
+                  <span>无限期</span>
+                </div>
+                <div class="mt10 label_list">
+                  <div class="flexr">
+                      <span>财富管理</span>
+                      <span>管理</span>
+                      <span>财富</span>
+                      <span>财富管理</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+				</div>
+			</div>
+  	</div>
+  </div>
+</main>
+
+<a href="javascript:$('html,body').animate({scrollTop:0},'slow');" class="gotop"></a>
+</body>
+<script src="../assets/js/jquery.js"></script>
+<script>
+  $(function(){
+    var wW = $(window).width();
+    var offsetL = $(".classify_sub_tab .classify_sub_item.active").offset().left + $(".classify_sub_tab .classify_sub_item.active").width();
+    if (offsetL > (wW - 70)) {
+      $(".classify_sub_tab").scrollLeft(offsetL - wW + 70);
+    } 
+  });
+</script>
+
+</html>

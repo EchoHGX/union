@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.031" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#326efa"/>
+      <stop offset="1" stop-color="#0014df"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.198" y1="0.096" x2="0.817" y2="0.903" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="我的" transform="translate(22335 3978)">
+    <g id="组_2703" data-name="组 2703">
+      <rect id="矩形_1896" data-name="矩形 1896" width="44" height="8" transform="translate(-22332.818 -3940.665)" fill="url(#linear-gradient)"/>
+      <path id="减去_39" data-name="减去 39" d="M15.932,31.866A15.935,15.935,0,0,1,4.666,4.666,15.933,15.933,0,1,1,27.2,27.2,15.834,15.834,0,0,1,15.932,31.866ZM12.839,22v2h6V22Zm7.823-9.383c-1.343,0-2.435,1.455-2.435,3.243S19.319,19.1,20.662,19.1,23.1,17.646,23.1,15.857,22.005,12.614,20.662,12.614Zm-9.736,0c-1.343,0-2.435,1.455-2.435,3.243S9.583,19.1,10.926,19.1s2.435-1.455,2.435-3.244S12.269,12.614,10.926,12.614Z" transform="translate(-22326.84 -3976.998)" fill="url(#linear-gradient-2)"/>
+    </g>
+    <rect id="矩形_2762" data-name="矩形 2762" width="48" height="48" transform="translate(-22335 -3978)" fill="none"/>
+  </g>
+</svg>

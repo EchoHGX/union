@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: none;
+      }
+
+      .cls-1 {
+        stroke: #387be6;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+
+      .cls-2 {
+        fill: #387be6;
+      }
+    </style>
+  </defs>
+  <g id="组_2411" data-name="组 2411" transform="translate(-253 -631)">
+    <g id="组_2061" data-name="组 2061" transform="translate(253.168 633.334)">
+      <g id="Orion_chat" transform="translate(0.953 2.858)">
+        <path id="layer2" class="cls-1" d="M13.486,8H7.743C4.571,8,2,10.282,2,13.1s2.571,5.1,5.743,5.1h.574v2.549L11.763,18.2h1.723c3.172,0,5.743-2.282,5.743-5.1S16.658,8,13.486,8Z" transform="translate(-2 -8)"/>
+        <circle id="layer1" class="cls-2" cx="1" cy="1" r="1" transform="translate(3.648 4.326)"/>
+        <circle id="layer1-2" data-name="layer1" class="cls-2" cx="1" cy="1" r="1" transform="translate(7.134 4.326)"/>
+        <circle id="layer1-3" data-name="layer1" class="cls-2" cx="1" cy="1" r="1" transform="translate(10.62 4.326)"/>
+      </g>
+      <rect id="矩形_2391" data-name="矩形 2391" class="cls-3" width="19.148" height="16.339" transform="translate(0 0)"/>
+    </g>
+    <rect id="矩形_2399" data-name="矩形 2399" class="cls-3" width="20" height="20" transform="translate(253 631)"/>
+  </g>
+</svg>

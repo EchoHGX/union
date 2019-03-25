@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telphone=no, email=no" />
+    <meta name="x5-page-mode" content="app">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="full-screen" content="yes">
+    <meta name="browsermode" content="application">
+    <title>搜索</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <script src="../assets/js/fontsize.js"></script>
+    <link href="../assets/css/basic.css" rel="stylesheet" />
+    <link href="../assets/css/search.css" rel="stylesheet" />
+    <link href="../assets/css/weui.min.css" rel="stylesheet" />
+</head>
+<body>
+<main class="main">
+    <div class="sea_head flexr">
+        <div class="sea_input">
+            <input type="text" name="search" placeholder="搜索">
+            <img src="../assets/images/search.png">
+        </div>
+        <a class="sea_cancel" href="javascript:history.go(-1);">取消</a>
+    </div>
+
+    <div class="sea_list">
+        <!-- 历史搜索 -->
+        <div class="flexr">
+            <p class="label pb20 pt20 pl15">历史搜索</p>
+            <a class="del fCStr  pb20 pt20 pr15" href="javascript:void(0);">清空记录</a>
+        </div>
+        <div class="history_list list_box flexr borderb  pl15 pr15">
+            <!-- <a class="item" href="javascript:void(0);">金钱</a>
+            <a class="item" href="javascript:void(0);">金钱</a>
+            <a class="item" href="javascript:void(0);">金钱</a>
+            <a class="item" href="javascript:void(0);">金钱</a> -->
+        </div>
+
+        <!-- 热门搜索 -->
+        <div class="flexr">
+            <p class="label pb20 pt20 pl15">热门搜索</p>
+        </div>
+        <div class="hot_lsit list_box flexr  pl15 pr15">
+            <a class="item" data-key="12" href="javascript:void(0);">12</a>
+            <a class="item" data-key="13" href="javascript:void(0);">13</a>
+            <a class="item" data-key="14" href="javascript:void(0);">14</a>
+            <a class="item" data-key="15" href="javascript:void(0);">15</a>
+        </div>
+    </div>
+</main>
+</body>
+<script src="../assets/js/jquery.js"></script>
+<script src="../assets/js/weui.min.js"></script>
+
+<script>
+    function search(searchkey){
+        //查询 后端处理search事件
+        // window.location.href="../goods/goodlist.html";
+        
+        //保存查询的条件
+        var hostoryData=toArr(searchkey);
+        localStorage.setItem("searchkey",hostoryData);
+    };
+
+
+    $(".sea_head input").focus();
+    $(document).keyup(function(event){
+      if(event.keyCode ==13){
+        var searchkey=$(".sea_head input").val();
+        if(searchkey){
+            search(searchkey);
+        }else{
+            console.log('empey');
+        }
+      }
+    });
+
+    
+
+    //读取缓存并将缓存转数组
+    function toArr(searchkey){
+        if (localStorage.getItem("searchkey")) {
+            var hostoryData=localStorage.getItem("searchkey").split(",");
+            var hasHostory=false;
+            var hostorylist='';
+            if (searchkey) {
+                hostorylist='<a class="item" href="javascript:void(0);" data-key="'+searchkey+'">'+ searchkey +'</a>';
+            }
+            hostoryData.forEach(function(item,index){
+                if (item == searchkey) {
+                    hasHostory = true;
+                    hostoryData.splice(index,1);
+                    return;
+                }
+                hostorylist+='<a class="item" href="javascript:void(0);" data-key="'+item+'">'+ item +'</a>';
+            })
+            if(searchkey){
+                hostoryData.unshift(searchkey);
+            }
+            $(".sea_list .history_list").html(hostorylist);
+            return hostoryData;
+        }else{
+            return [searchkey];
+        }
+    };
+
+    $(".sea_list").on("click",".del",function(){
+        weui.confirm('确认要清空么？', {
+            className:'search-box',
+            buttons: [{
+                label: '取消',
+                type: 'default',
+                onClick: function(){ 
+                    console.log('取消');
+                }
+            }, {
+                label: '确认',
+                type: 'primary',
+                onClick: function(){ 
+                    localStorage.removeItem("searchkey");
+                    location.reload();
+                }
+            }]
+        });
+    });
+    
+    $(".sea_list").on("click",".item",function(){
+        var searchkey=$(this).attr("data-key");
+        search(searchkey);
+    });
+    toArr();
+</script>
+</html>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28.406" height="28.406" viewBox="0 0 28.406 28.406">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #e14d33;
+      }
+    </style>
+  </defs>
+  <g id="组_1928" data-name="组 1928" transform="translate(-217 -367)">
+    <rect id="矩形_2276" data-name="矩形 2276" class="cls-1" width="28.406" height="28.406" transform="translate(217 367)"/>
+    <path id="减去_29" data-name="减去 29" class="cls-2" d="M2.445,28.406h0A2.353,2.353,0,0,1,0,26.164V2.243A2.353,2.353,0,0,1,2.445,0H23.634a2.353,2.353,0,0,1,2.445,2.243V26.164a2.353,2.353,0,0,1-2.445,2.243L13.34,24.668l-10.9,3.738ZM12.482,11.727h0v7.4l4.853-9.013-4.853,1.617v-8.2L8.5,13.056l3.931-1.31.055-.018Z" transform="translate(218.353 367)"/>
+  </g>
+</svg>

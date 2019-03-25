@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <g id="我的" transform="translate(22335 4088)">
+    <g id="组_2687" data-name="组 2687" transform="translate(-21680.9 -7010)">
+      <rect id="矩形_1899" data-name="矩形 1899" width="43.818" height="43.818" transform="translate(-651.917 2923)" fill="none"/>
+      <rect id="矩形_1896" data-name="矩形 1896" width="44" height="4" transform="translate(-651.917 2958.335)" fill="#121c33"/>
+      <rect id="矩形_1897" data-name="矩形 1897" width="7.967" height="4" transform="translate(-648.1 2958.335) rotate(90)" fill="#121c33"/>
+      <rect id="矩形_1898" data-name="矩形 1898" width="7.967" height="4" transform="translate(-607.099 2958.335) rotate(90)" fill="#121c33"/>
+      <g id="组_1479" data-name="组 1479" transform="translate(-645.942 2923)">
+        <g id="椭圆_208" data-name="椭圆 208" transform="translate(0)" fill="none" stroke="#121c33" stroke-width="4">
+          <circle cx="15.934" cy="15.934" r="15.934" stroke="none"/>
+          <circle cx="15.934" cy="15.934" r="13.934" fill="none"/>
+        </g>
+        <ellipse id="椭圆_209" data-name="椭圆 209" cx="2.434" cy="3.246" rx="2.434" ry="3.246" transform="translate(6.492 12.614)" fill="#121c33"/>
+        <ellipse id="椭圆_210" data-name="椭圆 210" cx="2.434" cy="3.246" rx="2.434" ry="3.246" transform="translate(16.229 12.614)" fill="#121c33"/>
+      </g>
+    </g>
+    <rect id="矩形_2757" data-name="矩形 2757" width="48" height="48" transform="translate(-22335 -4088)" fill="none"/>
+  </g>
+</svg>

@@ -1,0 +1,390 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>机构主页_管理员列表</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  <meta name="x5-page-mode" content="app">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="full-screen" content="yes">
+  <meta name="browsermode" content="application">
+	<link rel="stylesheet" href="../assets/css/basic.css">
+  <link rel="stylesheet" href="../assets/css/homepage.css">
+</head>
+<body>
+<div class="home_head">
+  <div class="m-header index5 bordern bgn">
+    <div class="left">
+        <a href="javascript:history.go(-1)" class="back-icon fCf"></a>
+    </div>
+    <div class="middle fCf">
+        机构主页
+    </div>
+    <div class="right">
+      <img src="../assets/images/ups.png">
+    </div>
+  </div>
+  <img  class="head_bg" src="../assets/images/3.jpg">
+</div>
+<main>
+	<div class="user_head">
+    <img  class="avatar" src="../assets/images/user_icon.png">
+    <p class="name">苹果技术有限公司</p>
+    <p class="jg_honor">
+      <img src="../assets/images/jg.png">
+      平台认证机构
+    </p>
+    <div class="other_info flexr">
+      <a href="javascript:void(0);">
+        <p class="val">3</p>
+        <p class="lab">浏览人气</p>
+      </a>
+      <a href="javascript:void(0);">
+        <p class="val">3</p>
+        <p class="lab">信用评分</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="item_tab pl15 pr15 flexr">
+    <a class="tab_link" href="javascript:void(0);">主页</a>
+    <a class="tab_link" href="javascript:void(0);">自营项目</a>
+    <a class="tab_link" href="javascript:void(0);">代理项目</a>
+    <a class="tab_link active" href="javascript:void(0);">机构成员</a>
+    <a class="tab_link" href="javascript:void(0);">发布的活动</a>
+  </div>
+  
+  <div class="split_line"></div>
+  <div class="list_mana_tab flexr">
+    <a class="tab_link active" href="javascript:void(0);">管理员</a>
+    <a class="tab_link" href="javascript:void(0);">业务员</a>
+  </div>
+
+  <div id="list-wrapper"  class="cBg">
+    <ul class="user_list">
+      
+    </ul>
+    <ul class="user_nav" style="display: none;">
+      
+    </ul>
+  </div>
+
+  <!-- 已经是机构下的人 就不显示这个认证 -->
+  <a class="ask_auth" href="javascript:void(0);">
+    <img src="../assets/images/auth.png">
+    <span>成员认证</span>
+  </a>
+</main>
+</body>
+<script src="../assets/js/fontsize.js"></script>
+<script src="../assets/js/jquery.js"></script>
+<script src="../assets/js/wordList.js"></script>
+<script>
+  $(function(){
+    
+    $(".go_search").click(function(){
+      $(".search_input").css("display","flex");
+    });
+
+    $(".search_input .cancel").click(function(){
+      $(".search_input").css("display","none");
+    });
+
+
+    var data = [
+        {
+          label: 'A',
+          lists: [
+            {
+              id: 'A1',
+              name: 'a-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'业务员'
+            },
+            {
+              id: 'A2',
+              name: 'a-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'业务员'
+            },
+            {
+              id: 'A3',
+              name: 'a-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'业务员'
+            },
+            {
+              id: 1,
+              name: 'a-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'业务员'
+            },
+            {
+              id: 1,
+              name: 'a-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'业务员'
+            }
+          ]
+        },
+        {
+          label: 'B',
+          lists: [
+            {
+              id: 1,
+              name: 'b-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'业务员'
+            },
+            {
+              id: 1,
+              name: 'b-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'业务员'
+            },
+            {
+              id: 1,
+              name: 'b-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'业务员'
+            },
+            {
+              id: 1,
+              name: 'b-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'业务员'
+            },
+            {
+              id: 1,
+              name: 'b-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'业务员'
+            }
+          ]
+        },
+        {
+          label: 'C',
+          lists: [
+            {
+              id: 1,
+              name: 'c-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'业务员'
+            },
+            {
+              id: 1,
+              name: 'c-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'业务员'
+            },
+            {
+              id: 1,
+              name: 'c-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'业务员'
+            },
+            {
+              id: 1,
+              name: 'c-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'业务员'
+            },
+            {
+              id: 1,
+              name: 'c-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'业务员'
+            }
+          ]
+        },
+        {
+          label: 'D',
+          lists: [
+            {
+              id: 1,
+              name: 'd-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'业务员'
+            },
+            {
+              id: 1,
+              name: 'd-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'业务员'
+            },
+            {
+              id: 1,
+              name: 'd-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'业务员'
+            },
+            {
+              id: 1,
+              name: 'd-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'业务员'
+            },
+            {
+              id: 1,
+              name: 'd-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'业务员'
+            }
+          ]
+        },
+        {
+          label: 'E',
+          lists: [
+            {
+              id: 1,
+              name: 'e-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'业务员'
+            },
+            {
+              id: 1,
+              name: 'e-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'业务员'
+            },
+            {
+              id: 1,
+              name: 'e-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'业务员'
+            },
+            {
+              id: 1,
+              name: 'e-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'业务员'
+            },
+            {
+              id: 1,
+              name: 'e-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'业务员'
+            }
+          ]
+        },
+        {
+          label: 'F',
+          lists: [
+            {
+              id: 1,
+              name: 'f-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'业务员'
+            },
+            {
+              id: 1,
+              name: 'f-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'业务员'
+            },
+            {
+              id: 1,
+              name: 'f-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'业务员'
+            },
+            {
+              id: 1,
+              name: 'f-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'业务员'
+            },
+            {
+              id: 1,
+              name: 'f-1',
+              phone: '21234324',
+              avatar: "../assets/images/user_icon.png",
+              nick:'业务员'
+            }
+          ]
+        }
+    ];
+    $.indexedList({
+         el: '.user_list', //主列表DOM [选填，默认值：.indexed-list]
+         elNav: '.user_nav', //右侧列表DOM [选填，默认值：.indexed-nav]
+         datas: data, //自定义的数据 [必填，默认为空数组]
+         showDetail: true
+    });
+  })
+</script>
+<script>
+  $(function(){
+    var el,oldel,touchStart = 0,touchEnd = 0,touchW = 0,hendW = $(".user_list li .del").width();
+    $(".user_list").on("touchstart","li dd",function(e){
+      touchStart = e.originalEvent.changedTouches[0].pageX;
+      el = $(this);
+      el.siblings("dd").animate({marginLeft:"0"},300).removeClass("active");
+      el.parent("dl").parent("li").siblings("li").find("dd").animate({marginLeft:"0"},300).removeClass("active");
+    });
+
+    $(".user_list").on("touchmove","li dd",function(e){
+      if(el.hasClass("active")){
+        return false;
+      }
+      touchEnd = e.originalEvent.changedTouches[0].pageX;
+      touchW =  touchEnd - touchStart;
+      if(touchW < 0 && touchW > -hendW){
+        el.css("margin-left",touchW + "px");
+      }
+    });
+
+    $(".user_list").on("touchend","li dd",function(e){
+      $(this).off('touchmove');
+      if(touchW <  -30){
+        el.animate({marginLeft: -hendW +"px"},300)
+        el.addClass("active");
+      }else{
+        el.animate({marginLeft: "0px"},300).removeClass("active");
+      }
+      touchStart = 0,
+      touchEnd = 0;
+      touchW = 0;
+    });
+
+
+    $(".user_list").on("click","li .del",function(){
+      var idx = $(this).attr("data-id");
+      alert(idx);
+    });
+  });
+</script>
+</html>

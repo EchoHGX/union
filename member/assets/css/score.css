@@ -1,0 +1,195 @@
+@charset "UTF-8";
+/*
+*	手机端公用样式 变量
+*/
+/*
+*	字体颜色定义
+*/
+/*
+*	字体大小定义
+*/
+.to_score {
+  position: absolute;
+  display: block;
+  right: 0;
+  top: 0;
+  line-height: 46px;
+  font-size: 16px;
+  padding-right: 15px;
+  color: #fff; }
+
+.score_head {
+  z-index: 2;
+  position: relative;
+  background: linear-gradient(359deg, #3963c4 0%, #4cbbec 100%);
+  box-shadow: 0px 10px 15px rgba(56, 123, 230, 0.2); }
+  .score_head .head_info {
+    padding: .853rem .64rem 1.28rem .64rem; }
+    .score_head .head_info .avatar_box {
+      width: 1.707rem;
+      height: 1.707rem;
+      border-radius: 50%;
+      border: 1px solid #7EB0FF;
+      overflow: hidden; }
+      .score_head .head_info .avatar_box img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        border-radius: 50%; }
+    .score_head .head_info .infos {
+      flex: 1; }
+      .score_head .head_info .infos .desc {
+        color: #95BAF5; }
+  .score_head .score_detail {
+    margin-top: .853rem;
+    padding-top: 1.28rem;
+    border-top: 1px solid #87AFEE; }
+    .score_head .score_detail p {
+      width: 100%;
+      text-align: center;
+      color: #95BAF5; }
+    .score_head .score_detail .num {
+      font-size: 1.195rem;
+      color: #fff; }
+
+.score_wrap {
+  transform: translateY(-10px);
+  z-index: 1; }
+  .score_wrap .score_list {
+    background: #fff;
+    padding-bottom: 1.707rem; }
+    .score_wrap .score_list .title {
+      width: 100%;
+      font-size: .512rem;
+      color: #bfbfbf;
+      text-align: center;
+      position: relative; }
+      .score_wrap .score_list .title:before {
+        content: '';
+        width: 1.024rem;
+        height: 1px;
+        position: absolute;
+        background: #E5E5E5;
+        display: block;
+        right: 4.907rem;
+        top: 50%;
+        transform: translateY(-50%); }
+      .score_wrap .score_list .title:after {
+        content: '';
+        width: 1.024rem;
+        height: 1px;
+        position: absolute;
+        background: #E5E5E5;
+        display: block;
+        left: 4.907rem;
+        top: 50%;
+        transform: translateY(-50%); }
+    .score_wrap .score_list .score_item {
+      height: 80px;
+      align-items: center;
+      position: relative; }
+      .score_wrap .score_list .score_item .icon {
+        display: block;
+        position: absolute;
+        left: .853rem;
+        top: .853rem;
+        width: 1.536rem;
+        height: 1.536rem; }
+        .score_wrap .score_list .score_item .icon img {
+          display: block;
+          width: 100%;
+          height: 100%; }
+      .score_wrap .score_list .score_item .desc {
+        margin-left: 2.389rem;
+        width: 11.52rem;
+        height: 100%;
+        position: relative; }
+        .score_wrap .score_list .score_item .desc .num {
+          position: absolute;
+          top: 50%;
+          right: .64rem;
+          transform: translateY(-50%); }
+
+.rult_ztxt {
+  width: 100%;
+  padding: .853rem .853rem 1.707rem .853rem;
+  border-radius: .256rem;
+  background: #fff; }
+  .rult_ztxt .title {
+    font-size: .683rem;
+    text-align: center;
+    margin-bottom: .853rem; }
+  .rult_ztxt .cont {
+    color: #929FAD;
+    line-height: 1.195rem;
+    text-indent: 2em; }
+    .rult_ztxt .cont p {
+      color: #929FAD;
+      line-height: 1.195rem;
+      text-indent: 2em; }
+
+.swrite_cont {
+  width: 100%;
+  margin-top: 1.067rem;
+  position: relative;
+  border-radius: .256rem;
+  background: #fff;
+  padding-top: 1.92rem;
+  padding-left: .853rem;
+  padding-right: .853rem;
+  padding-bottom: 1.28rem; }
+  .swrite_cont.item_co {
+    margin-top: 1.877rem; }
+  .swrite_cont .eval_ztxt {
+    line-height: 2; }
+    .swrite_cont .eval_ztxt p {
+      margin-bottom: .64rem;
+      line-height: 2; }
+  .swrite_cont .input_wrap {
+    display: block;
+    width: 100%;
+    height: 7.68rem;
+    margin-top: 1.28rem;
+    font-size: .512rem;
+    border-radius: .256rem;
+    background: #F6F7F9;
+    padding: .427rem;
+    border: none;
+    outline: none;
+    line-height: 1.5; }
+  .swrite_cont .suc_btn {
+    display: block;
+    width: 100%;
+    background: #387BE6;
+    color: #fff;
+    text-align: center;
+    line-height: 1.877rem;
+    border-radius: .256rem;
+    margin-top: 1.28rem; }
+
+.lt_avatar {
+  display: block;
+  width: 2.048rem;
+  height: 2.048rem;
+  position: absolute;
+  border-radius: 50%;
+  left: .853rem;
+  top: -1.024rem; }
+
+.star {
+  display: block;
+  width: 1.195rem;
+  height: 1.195rem;
+  margin-right: .512rem; }
+  .star img {
+    display: block;
+    width: 100%;
+    height: 100%; }
+  .star .star_y {
+    display: none; }
+  .star.active .star_y {
+    display: block; }
+  .star.active .star_n {
+    display: none; }
+
+/*# sourceMappingURL=score.css.map */

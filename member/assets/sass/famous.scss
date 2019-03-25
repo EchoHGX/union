@@ -1,0 +1,168 @@
+@charset 'UTF-8';
+
+@import "params.scss";
+
+.have_filter{
+	border-radius: .256rem;
+	padding: .213rem;
+	margin-right: .427rem;
+	display: block;
+	margin-bottom: .427rem;
+	background: $cBgCut;
+	font-size: .512rem;
+	color: $fC2;
+}
+
+.right{
+	.filtering{
+		display: none;
+	}
+	.no_filter{
+		display: block;
+	}
+	&.active{
+		.no_filter{
+			display: none;
+		}
+		.filtering{
+			display: block;
+		}
+	}
+}
+
+.filter_box{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	transition: all .3s;
+	transform: translateX(100%);
+	z-index: 666;
+	&.active{
+		transform: translateX(0);
+	}
+	.filter_bg{
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: rgba(0,0,0,.4);
+		position: absolute;
+		z-index: 555;
+	}
+	.filter_list{
+		width: 88%;
+		height: 100%;
+		margin-left: 12%;
+		position: relative;
+		overflow: scroll;
+		padding-bottom: 1.707rem;
+		z-index: 666;
+		.btns{
+			width: 88%;
+			height: 2.133rem;
+			position: fixed;
+			bottom: 0;
+			right: 0;
+			.btn{
+				flex: 1;
+				display: block;
+				line-height: 2.133rem;
+				text-align: center;
+			}
+		}
+	}
+	.filter_class{
+		width: 100%;
+		max-height: 6.4rem;
+		transition: all .3s;
+		overflow: hidden;
+		.label{
+			line-height: 20px;
+			flex: 1;
+		}
+		.look{
+			line-height: 20px;
+			&.active img{
+				transform: rotate(180deg);
+			}
+			img{
+				width: 20px;
+				height: 20px;
+				transition: all .3s;
+				transform: rotate(0);
+			}
+		}
+		.filters{
+			flex-wrap: wrap;
+		}
+		.filter_item{
+			line-height: 1.28rem;
+			padding: 0 .853rem;
+			border-radius:100px;
+			background: $cBgInput;
+			&.active{
+				background: $cBgStr;
+				color: #fff;
+			}
+		}
+	}
+}
+
+.famous_list{
+ 	.famous_item{
+		width: 100%;
+		overflow: hidden;
+		padding-top: .853rem;
+		padding-right: .64rem;
+		padding-left: .64rem;
+		.item_img{
+			width: 2.048rem;
+			height: 2.048rem;
+			min-width: 2.048rem;
+			display: block;
+			border-radius: 50%;
+		}
+		.item_desc{
+			flex: 1;
+			margin-left: .427rem;
+			.head{
+				.label{
+					padding-left: .213rem;
+			    position: relative;
+			    font-size: .512rem;
+			    height: .853rem;
+			    color: #929FAD;
+			    &:after{
+			    	content: '';
+				    display: block;
+				    height: .427rem;
+				    width: 1px;
+				    background: #E5E5E5;
+				    position: absolute;
+				    top: 50%;
+				    transform: translateY(-50%);
+				    left: 0;
+			    }
+				}
+			}
+			.label_list{
+				overflow-y: hidden;
+		    flex-wrap: nowrap;
+		    overflow-x: auto;
+		    span{
+		    	display: block;
+			    float: left;
+			    margin-right: .427rem;
+			    line-height: .768rem;
+			    padding: 0 .213rem;
+			    color: #387BE6;
+			    background: #DFEAFC;
+			    white-space: nowrap;
+			    font-size: .427rem;
+		    }
+			}
+		}
+ 	}
+}

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.21" y1="0.113" x2="0.962" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#326efa"/>
+      <stop offset="1" stop-color="#0014df"/>
+    </linearGradient>
+  </defs>
+  <g id="社区" transform="translate(22413 3978)">
+    <g id="组_2688" data-name="组 2688" transform="translate(-2110 14758)">
+      <path id="减去_37" data-name="减去 37" d="M2154-14714h-22a21.858,21.858,0,0,1-15.557-6.442A21.858,21.858,0,0,1,2110-14736a21.858,21.858,0,0,1,6.443-15.557A21.859,21.859,0,0,1,2132-14758a21.86,21.86,0,0,1,15.556,6.444A21.86,21.86,0,0,1,2154-14736v22Zm-27-24v4h10v-4Z" transform="translate(-22411 -3977)" fill="url(#linear-gradient)"/>
+    </g>
+    <rect id="矩形_2761" data-name="矩形 2761" width="48" height="48" transform="translate(-22413 -3978)" fill="none"/>
+  </g>
+</svg>

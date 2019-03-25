@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>机构主页</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  <meta name="x5-page-mode" content="app">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="full-screen" content="yes">
+  <meta name="browsermode" content="application">
+	<link rel="stylesheet" href="../assets/css/basic.css">
+	<link rel="stylesheet" href="../assets/css/homepage.css">
+</head>
+<body class="cBgf">
+<div class="home_head">
+  <div class="m-header index5 bordern bgn">
+    <div class="left">
+        <a href="javascript:history.go(-1)" class="back-icon fCf"></a>
+    </div>
+    <div class="middle fCf">
+        机构主页
+    </div>
+    <div class="right">
+      <img src="../assets/images/ups.png">
+    </div>
+  </div>
+  <img  class="head_bg" src="../assets/images/3.jpg">
+</div>
+<main>
+  <div class="user_head">
+    <img  class="avatar" src="../assets/images/user_icon.png">
+    <p class="name">苹果技术有限公司</p>
+    <p class="jg_honor">
+      <img src="../assets/images/jg.png">
+      平台认证机构
+    </p>
+    <div class="other_info flexr">
+      <a href="javascript:void(0);">
+        <p class="val">3</p>
+        <p class="lab">浏览人气</p>
+      </a>
+      <a href="javascript:void(0);">
+        <p class="val">3</p>
+        <p class="lab">信用评分</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="item_tab pl15 pr15 flexr">
+    <a class="tab_link" href="javascript:void(0);">主页</a>
+    <a class="tab_link" href="javascript:void(0);">自营项目</a>
+    <a class="tab_link" href="javascript:void(0);">代理项目</a>
+    <a class="tab_link" href="javascript:void(0);">机构成员</a>
+    <a class="tab_link" href="javascript:void(0);">发布的活动</a>
+    <a class="tab_link active" href="javascript:void(0);">帖子</a>
+  </div>
+
+  <!-- 分割线 -->
+  <div class="split_line"></div>
+  
+  <div class="cBg">
+    <div class="post_item mb20">
+      <div class="post_desc flexr">
+        <div class="post_name">
+          <p class="name ellipsis2">现代中国绘画</p>
+          <p class="desc fC2 ellipsis">艺术画也需要紧跟潮流</p>
+        </div>
+        <div class="post_img">
+          <img src="../assets/images/3.jpg">
+        </div>
+      </div>
+      <div class="post_fans mt20 flexr">
+        <div class="flexr labels">
+          <span>ipad</span>
+          <span>android</span>
+          <span>iphone</span>
+        </div>
+        <p class="num">评价<span>234</span></p>
+        <p class="num">浏览<span>23</span></p>
+      </div>
+    </div>
+    <div class="post_item mb20">
+      <div class="post_desc flexr">
+        <div class="post_name">
+          <p class="name ellipsis2">现代中国绘画</p>
+          <p class="desc fC2 ellipsis">艺术画也需要紧跟潮流</p>
+        </div>
+        <div class="post_img">
+          <img src="../assets/images/3.jpg">
+        </div>
+      </div>
+      <div class="post_fans mt20 flexr">
+        <div class="flexr labels">
+          <span>ipad</span>
+          <span>android</span>
+          <span>iphone</span>
+        </div>
+        <p class="num">评价<span>234</span></p>
+        <p class="num">浏览<span>23</span></p>
+      </div>
+    </div>
+    <div class="post_item mb20">
+      <div class="post_desc flexr">
+        <div class="post_name">
+          <p class="name ellipsis2">现代中国绘画</p>
+          <p class="desc fC2 ellipsis">艺术画也需要紧跟潮流</p>
+        </div>
+        <div class="post_img">
+          <img src="../assets/images/3.jpg">
+        </div>
+      </div>
+      <div class="post_fans mt20 flexr">
+        <div class="flexr labels">
+          <span>ipad</span>
+          <span>android</span>
+          <span>iphone</span>
+        </div>
+        <p class="num">评价<span>234</span></p>
+        <p class="num">浏览<span>23</span></p>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+<script src="../assets/js/fontsize.js"></script>
+<script src="../assets/js/jquery.js"></script>
+<script>
+  $(function(){
+    var wW = $(window).width();
+    var offsetL = $(".item_tab .tab_link.active").offset().left + $(".item_tab .tab_link.active").width();
+    if (offsetL > wW) {
+      $(".item_tab").scrollLeft(offsetL - wW);
+    } 
+  });
+</script>
+</html>

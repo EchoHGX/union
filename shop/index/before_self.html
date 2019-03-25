@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telphone=no, email=no" />
+    <meta name="x5-page-mode" content="app">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="full-screen" content="yes">
+    <meta name="browsermode" content="application">
+    <title>选择标签</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <script src="../assets/js/fontsize.js"></script>
+    <link href="../assets/css/basic.css" rel="stylesheet" />
+    <link href="../assets/css/before.css" rel="stylesheet" />
+</head>
+<body>
+<header>
+    <div class="m-header">
+        <div class="left">
+            <a href="javascript:history.go(-1)" class="back-icon"></a>
+        </div>
+        <div class="middle">
+            自定义标签
+        </div>
+        <div class="right fCStr" style="line-height: 44px;">
+            完成
+        </div>
+    </div>
+</header>
+<div style="width: 100%;overflow: hidden;">
+    <div class="label_left self">
+        <ul>
+            <li data-type="1" class="active">设计</li>
+            <li data-type="2">技术</li>
+            <li data-type="3">产品</li>
+            <li data-type="4">运营</li>
+            <li data-type="1">设计</li>
+            <li data-type="2">技术</li>
+            <li data-type="3">产品</li>
+            <li data-type="4">运营</li>
+            <li data-type="1">设计</li>
+            <li data-type="2">技术</li>
+            <li data-type="3">产品</li>
+            <li data-type="4">运营</li>
+            <li data-type="1">设计</li>
+            <li data-type="2">技术</li>
+            <li data-type="3">产品</li>
+            <li data-type="4">运营</li>
+            <li data-type="1">设计</li>
+            <li data-type="2">技术</li>
+            <li data-type="3">产品</li>
+            <li data-type="4">运营</li>
+        </ul>
+    </div>
+
+    <div class="label_right self">
+    		<div class="add_form flexr">
+    			<input class="add_input" type="text" name="label" placeholder="添加该领域下的标签">
+    			<a class="add" href="javascript:void(0);"  data-addtype="设计" data-addid="2">添加</a>
+    		</div>
+    		<p class="fC2 mt10">输入一个关键词即可添加，不用连续输入</p>
+        <ul class="label_list pr15 flexr list1 showing" style="display: block;">
+            <!-- <li id="11" class="active">web</li>
+            <li id="12">java</li>
+            <li id="13">php</li> -->
+        </ul>
+        <ul class="label_list pr15 flexr list2">
+            <!-- <li id="21" class="active">前端</li>
+            <li id="22">后端</li>
+            <li id="23">服务器</li> -->
+        </ul>
+    </div>
+</div>
+</body>
+<script src="../assets/js/jquery.js"></script>
+<script>
+    $(function(){
+        var winH=$(window).height();
+        var topH=$(".top").height();
+        $(".label_left").height(winH - topH + 'px');
+        console.log(winH);
+
+        $(".label_left li").click(function(){
+            var type=$(this).attr("data-type");
+            $(this).addClass("active").siblings(".active").removeClass("active");
+            $(".label_right .list" + type).show().addClass("showing").siblings(".showing").removeClass("showing").hide();
+        });
+
+        $(".label_right .add_form .add").click(function(){
+			var addtype = $(this).attr("data-addtype");
+			var addval = $(this).siblings("input").val();
+			if (!addval) {
+				return false;
+			}
+			//添加成功后
+			var addlabel = '<li id="">'+ addval +'<i></i></li>'
+			$(".label_right .label_list.showing").append(addlabel);
+			$(this).siblings("input").val("");
+        });
+
+        $(".label_right .label_list").on("click","li i",function(){
+            $(this).parent("li").remove();
+        });
+    });
+</script>
+</html>

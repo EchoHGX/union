@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telphone=no, email=no" />
+    <meta name="x5-page-mode" content="app">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="full-screen" content="yes">
+    <meta name="browsermode" content="application">
+    <title>选择地址</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <script src="../assets/js/fontsize.js"></script>
+    <link href="../assets/css/basic.css" rel="stylesheet" />
+    <style>
+      .city_list_wrap .wordkey{
+        font-size: .597rem;
+        color: #929FAD;
+        line-height: 1.28rem;
+        border-bottom: 1px solid #e5e5e5;
+        padding-left: .64rem;
+        border-top: .427rem solid #fafafa;
+      }
+      .city_list{
+        padding-left: .64rem;
+        padding-right: .64rem;
+      }
+      .city_list a{
+        display: block;
+        padding-top: .853rem;
+        padding-bottom: .853rem;
+        font-size: .597rem;
+        color: #121C33;
+        border-bottom: 1px solid #E5E5E5;
+      }
+      .city_list a:nth-last-of-type(1){
+        border-bottom: none;
+      }
+      .word_list{
+        position: fixed;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+      }
+      .word_list a{
+        display: block;
+        font-size: .597rem;
+        color: #121C33;
+        width: 1rem;
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+<header>
+    <div class="m-header">
+        <div class="left">
+            <a href="javascript:history.go(-1)" class="back-icon"></a>
+        </div>
+        <div class="middle">
+            选择所在地址
+        </div>
+        <div class="right"></div>
+    </div>
+</header>
+<main>
+    <div class="flexr pl15 pr15 borderb">
+        <p class="locat_ztxt pt15 pb15 pl20" id="locat_ztxt" style="background: url(../assets/images/icon_address.png) left center no-repeat;background-size: .512rem;flex: 1;">定位中</p>
+        <a class="locat_again pt15 pb15 fS12 fCStr" href="javascript:void(0);">重新定位</a>
+    </div>
+    <!-- 热门城市 -->
+    <div class="pt20">
+      <p class="label pl10 pb10 fC2 fS12 borderl">热门城市</p>
+      <div class="city_list">
+        <a href="javascript:void(0);" data-city="11001">北京</a>
+        <a href="javascript:void(0);" data-city="11001">北京</a>
+        <a href="javascript:void(0);" data-city="11001">北京</a>
+        <a href="javascript:void(0);" data-city="11001">北京</a>
+        <a href="javascript:void(0);" data-city="11001">北京</a>
+        <a href="javascript:void(0);" data-city="11001">北京</a>
+      </div>
+    </div>
+    
+    <!-- 其他城市 -->
+    <div class="city_list_wrap">
+      <p class="wordkey A">A</p>
+      <div class="city_list listA">
+        <a href="javascript:void(0);" data-city="11001">北京</a>
+        <a href="javascript:void(0);" data-city="11001">北京</a>
+        <a href="javascript:void(0);" data-city="11001">北京</a>
+        <a href="javascript:void(0);" data-city="11001">北京</a>
+        <a href="javascript:void(0);" data-city="11001">北京</a>
+        <a href="javascript:void(0);" data-city="11001">北京</a>
+      </div>
+
+      <p class="wordkey B">B</p>
+      <div class="city_list listB">
+        <a href="javascript:void(0);" data-city="11001">北京</a>
+        <a href="javascript:void(0);" data-city="11001">北京</a>
+        <a href="javascript:void(0);" data-city="11001">北京</a>
+        <a href="javascript:void(0);" data-city="11001">北京</a>
+        <a href="javascript:void(0);" data-city="11001">北京</a>
+        <a href="javascript:void(0);" data-city="11001">北京</a>
+      </div>
+
+      <p class="wordkey C">C</p>
+      <div class="city_list listC">
+        <a href="javascript:void(0);" data-city="11001">北京</a>
+        <a href="javascript:void(0);" data-city="11001">北京</a>
+        <a href="javascript:void(0);" data-city="11001">北京</a>
+        <a href="javascript:void(0);" data-city="11001">北京</a>
+        <a href="javascript:void(0);" data-city="11001">北京</a>
+        <a href="javascript:void(0);" data-city="11001">北京</a>
+      </div>
+
+      <p class="wordkey D">D</p>
+      <div class="city_list listD"></div>
+
+      <p class="wordkey E">E</p>
+      <div class="city_list listE"></div>
+
+      <p class="wordkey F">F</p>
+      <div class="city_list listF"></div>
+
+      <p class="wordkey G">G</p>
+      <div class="city_list listG"></div>
+
+      <p class="wordkey H">H</p>
+      <div class="city_list listH"></div>
+
+      <p class="wordkey I">I</p>
+      <div class="city_list listI"></div>
+
+      <p class="wordkey J">J</p>
+      <div class="city_list listJ"></div>
+
+      <p class="wordkey K">K</p>
+      <div class="city_list listK"></div>
+
+      <p class="wordkey L">L</p>
+      <div class="city_list listL"></div>
+
+      <p class="wordkey M">M</p>
+      <div class="city_list listM"></div>
+
+      <p class="wordkey N">N</p>
+      <div class="city_list listN"></div>
+
+      <p class="wordkey O">O</p>
+      <div class="city_list listO"></div>
+
+      <p class="wordkey P">P</p>
+      <div class="city_list listP"></div>
+
+      <p class="wordkey Q">Q</p>
+      <div class="city_list listQ"></div>
+
+      <p class="wordkey R">R</p>
+      <div class="city_list listR"></div>
+
+      <p class="wordkey E">E</p>
+      <div class="city_list listE"></div>
+
+      <p class="wordkey S">S</p>
+      <div class="city_list listS"></div>
+
+      <p class="wordkey U">U</p>
+      <div class="city_list listU"></div>
+
+      <p class="wordkey V">V</p>
+      <div class="city_list listV"></div>
+
+      <p class="wordkey W">W</p>
+      <div class="city_list listW"></div>
+
+      <p class="wordkey X">X</p>
+      <div class="city_list listX"></div>
+
+      <p class="wordkey Y">Y</p>
+      <div class="city_list listY"></div>
+
+      <p class="wordkey Z">Z</p>
+      <div class="city_list listZ"></div>
+    </div>
+</main>
+<div class="word_list">
+  <a href="javascript:void(0);">A</a>
+  <a href="javascript:void(0);">B</a>
+  <a href="javascript:void(0);">C</a>
+  <a href="javascript:void(0);">D</a>
+  <a href="javascript:void(0);">E</a>
+  <a href="javascript:void(0);">F</a>
+  <a href="javascript:void(0);">G</a>
+  <a href="javascript:void(0);">H</a>
+  <a href="javascript:void(0);">I</a>
+  <a href="javascript:void(0);">J</a>
+  <a href="javascript:void(0);">K</a>
+  <a href="javascript:void(0);">L</a>
+  <a href="javascript:void(0);">M</a>
+  <a href="javascript:void(0);">N</a>
+  <a href="javascript:void(0);">O</a>
+  <a href="javascript:void(0);">P</a>
+  <a href="javascript:void(0);">Q</a>
+  <a href="javascript:void(0);">R</a>
+  <a href="javascript:void(0);">E</a>
+  <a href="javascript:void(0);">S</a>
+  <a href="javascript:void(0);">U</a>
+  <a href="javascript:void(0);">V</a>
+  <a href="javascript:void(0);">W</a>
+  <a href="javascript:void(0);">X</a>
+  <a href="javascript:void(0);">Y</a>
+  <a href="javascript:void(0);">Z</a>
+</div>
+</body>
+<script src="../assets/js/jquery.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=mgPzPGRQKo0IWMAiN4pwUz6rq3DYP8UB"></script>
+<script>
+  $(function(){
+    /*var words = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','E','S','U','V','W','X','Y','Z'];
+    var words_html = '',city_list = '';
+    $.each(words,function(index,item){
+      words_html +='<a href="javascript:void(0);">'+item+'</a>';
+      city_list +='<p class="wordkey '+item+'">'+item+'</p>
+      <div class="city_list list'+item+'"></div>';
+    });
+    $(".city_list_wrap").html(city_list);
+    $(".word_list").html(words_html);*/
+
+
+    $(".word_list").on("click","a",function(){
+      var wordkey = $(this).html();
+      $('html,body').animate({scrollTop:$('.wordkey.'+wordkey).offset().top},300);
+    });
+  
+    
+    //定位当前城市 
+    var geolocation = new BMap.Geolocation();
+    function getLocation(){
+      geolocation.getCurrentPosition(function(r){
+        if(this.getStatus() == BMAP_STATUS_SUCCESS){
+          $("#locat_ztxt").html(r.address.city)
+        } else {
+          $("#locat_ztxt").html('定位失败');
+        } 
+      });  
+    }
+
+    getLocation();
+    
+    // 重新定位
+    $(".locat_again").click(function(){
+      getLocation();
+    });
+  });
+</script>
+</html>

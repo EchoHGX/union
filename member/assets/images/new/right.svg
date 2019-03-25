@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #929fad;
+      }
+    </style>
+  </defs>
+  <g id="符号_9_58" data-name="符号 9 – 58" transform="translate(-342 -968)">
+    <g id="组_965" data-name="组 965" transform="translate(285 1328) rotate(-90)">
+      <rect id="bg" class="cls-1" width="18" height="18" transform="translate(342 57)"/>
+      <path id="union" class="cls-2" d="M4.738,10.108.227,5.6a.576.576,0,0,1-.06-.052.581.581,0,0,1,0-.814A.577.577,0,0,1,.224,4.68L4.738.167a.57.57,0,0,1,.806.806L1.38,5.138,5.544,9.3a.571.571,0,0,1-.806.807Z" transform="translate(345.618 68.61) rotate(-90)"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,87 @@
+@charset "UTF-8";
+/*
+* 搜索样式
+*/
+/*
+*	手机端公用样式 变量
+*/
+/*
+*	字体颜色定义
+*/
+/*
+*	字体大小定义
+*/
+.sea_head {
+  width: 100%;
+  height: 46px;
+  padding-left: 15px; }
+  .sea_head .sea_input {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -moz-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    height: 40px;
+    margin-top: 3px;
+    background: #F8F8F8;
+    position: relative;
+    border-radius: 6px; }
+    .sea_head .sea_input input {
+      width: 100%;
+      height: 100%;
+      background: #F8F8F8;
+      outline: none;
+      border: none;
+      padding-left: 40px;
+      line-height: 40px;
+      border-radius: 6px;
+      font-size: 14px; }
+    .sea_head .sea_input img {
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      top: 12px;
+      left: 12px; }
+  .sea_head .sea_cancel {
+    display: block;
+    padding: 0 15px;
+    line-height: 46px;
+    font-size: 14px;
+    color: #929FAD;
+    margin-left: 20px; }
+
+.sea_list .label {
+  color: #929FAD;
+  line-height: .853rem;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1; }
+.sea_list .list_box {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .sea_list .list_box .item {
+    display: block;
+    background: #F8F8F8;
+    padding: .427rem;
+    margin-right: .427rem;
+    margin-bottom: .853rem;
+    border-radius: .256rem; }
+
+.noresult_tips {
+  font-size: .597rem;
+  color: #929FAD;
+  margin-top: .853rem;
+  text-align: center; }
+
+.tips_alert {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8); }
+
+/*# sourceMappingURL=search.css.map */

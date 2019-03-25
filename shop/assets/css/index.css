@@ -1,0 +1,190 @@
+@charset "UTF-8";
+/*
+*		首页样式
+*/
+/*
+*	手机端公用样式 变量
+*/
+/*
+*	字体颜色定义
+*/
+/*
+*	字体大小定义
+*/
+.i_head {
+  width: 100%;
+  height: 46px;
+  background: #fff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 666; }
+  .i_head .head_left {
+    position: relative;
+    width: 80px;
+    height: 46px;
+    text-align: center;
+    line-height: 46px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .i_head .head_left span {
+      display: block; }
+    .i_head .head_left i {
+      display: block;
+      width: 16px;
+      height: 46px;
+      background: url(../images/arr_down.png) center center no-repeat;
+      background-size: 100%; }
+  .i_head .head_midder {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -moz-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    border-radius: 500px;
+    color: #929FAD;
+    font-size: 12px;
+    height: 32px;
+    margin-top: 7px;
+    line-height: 32px;
+    padding-left: 40px;
+    background: #F8F8F8 url(../images/search.png) 15px center no-repeat;
+    background-size: 15px; }
+  .i_head .head_right {
+    display: block;
+    width: 90px;
+    height: 32px;
+    background: -webkit-gradient(linear, right top, left top, from(#387be6), to(#7c58a6));
+    background: linear-gradient(270deg, #387be6 0%, #7c58a6 100%);
+    border-radius: 500px;
+    text-align: center;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 7px;
+    margin-left: 20px;
+    margin-right: 15px;
+    color: #fff;
+    line-height: 32px; }
+
+.i_swiper {
+  width: 100%;
+  height: 8.32rem;
+  position: relative;
+  overflow: hidden; }
+  .i_swiper .swiper-slide {
+    width: 100%;
+    padding: .427rem .64rem .981rem; }
+    .i_swiper .swiper-slide a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: -webkit-gradient(linear, right top, left top, from(#3c5fc8), to(#7b57a8));
+      background: linear-gradient(270deg, #3c5fc8 0%, #7b57a8 100%);
+      -webkit-box-shadow: 0px 10px 15px rgba(56, 123, 230, 0.2);
+      box-shadow: 0px 10px 15px rgba(56, 123, 230, 0.2);
+      border-radius: .256rem; }
+    .i_swiper .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      border-radius: .256rem; }
+  .i_swiper .swiper-pagination {
+    bottom: 0 !important; }
+
+.mess_wrap {
+  width: 92%;
+  height: 1.451rem;
+  line-height: 1.451rem;
+  overflow: hidden;
+  margin: 0 auto;
+  background: #F8F8F8; }
+  .mess_wrap .label {
+    width: 2.048rem;
+    line-height: 1.451rem;
+    text-align: center;
+    font-size: 14px;
+    color: #929FAD;
+    min-width: 2.048rem; }
+  .mess_wrap .mess_list {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -moz-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding-right: .853rem;
+    max-width: 11.947rem;
+    -webkit-transition: all .3s;
+    transition: all .3s; }
+    .mess_wrap .mess_list li {
+      width: 100%;
+      line-height: 1.451rem;
+      font-size: 12px; }
+
+.menu_wrap {
+  width: 100%;
+  padding-bottom: 0.427rem;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .menu_wrap .menu_item {
+    display: block;
+    width: 20%;
+    text-align: center;
+    margin-top: .853rem;
+    margin-bottom: .427rem; }
+    .menu_wrap .menu_item img {
+      width: 1.451rem;
+      height: 1.451rem;
+      border-radius: .427rem; }
+    .menu_wrap .menu_item p {
+      width: 100%;
+      text-align: center;
+      line-height: .725rem;
+      margin-top: .427rem;
+      font-size: .512rem; }
+
+.tipe_alert {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: none; }
+  .tipe_alert .bg {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 5; }
+  .tipe_alert .cont {
+    width: 11.093rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: .256rem;
+    background: #fff;
+    z-index: 6; }
+    .tipe_alert .cont img {
+      width: 8.448rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 1.707rem; }
+    .tipe_alert .cont .tipz {
+      margin-top: 2.048rem;
+      padding-bottom: .853rem;
+      text-align: center; }
+    .tipe_alert .cont .btn_k {
+      display: block;
+      width: 100%;
+      height: 2.56rem;
+      line-height: 2.56rem;
+      text-align: center;
+      color: #387BE6; }
+
+/*# sourceMappingURL=index.css.map */

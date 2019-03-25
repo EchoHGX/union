@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telphone=no, email=no" />
+    <meta name="x5-page-mode" content="app">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="full-screen" content="yes">
+    <meta name="browsermode" content="application">
+    <title>编辑个人主页</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <script src="../assets/js/fontsize.js"></script>
+    <link href="../assets/css/basic.css" rel="stylesheet" />
+    <link href="../assets/css/homepage_new.css" rel="stylesheet" />
+    <link href="../assets/css/weui.min.css" rel="stylesheet" />
+    <style>
+      .weui-picker__item{
+        line-height: 34px;
+        padding: 0;
+      }
+    </style>
+</head>
+<body class="cBg">
+<header class="m-header borderl">
+  <div class="left">
+      <a href="javascript:history.go(-1)" class="back-icon"></a>
+  </div>
+  <div class="middle">编辑个人主页</div>
+  <div class="right"></div>
+</header>
+<main>
+  <div class="edit_head pl15 cBgf">
+    <div class="edit_img pr15">
+      <div class="img_warp"  style="background-image: url(../assets/images/new/user_head.jpg);background-position: center center;background-repeat: no-repeat;background-size: cover;">
+        <a href="javascript:void(0);" class="img_btn">上传背景图</a>
+      </div>
+    </div>
+    <div class="edit_wrap mt20 pb10 borderl im pr15">
+      <label class="flexr edit_item" id="avatar">
+        <p class="lab">头像</p>
+        <img class="avatar" src="../assets/images/test_logo.png">
+        <input type="file" class="file" accept="image/*" name="" value="">
+        <input type="hidden" class="val" name="">
+      </label>
+    </div>
+    <div class="edit_wrap pr15">
+      <div class="flexr edit_item pt15 pb15">
+        <p class="lab">昵称</p>
+        <p class="val">派大星总裁</p>
+      </div>
+    </div>
+  </div>
+
+  <div class=" pl15 cBgf mt10">
+    <div class="edit_wrap pr15 borderl">
+      <div class="flexr edit_item pt15 pb15">
+        <p class="lab">简介</p>
+        <p class="val ellipsis">谈起比特大陆这家公司，笔者不由得会想到会想到会想到</p>
+      </div>
+    </div>
+    <div class="edit_wrap pr15 borderl">
+      <div class="flexr edit_item pt15 pb15">
+        <p class="lab">标签</p>
+        <div class="lab_list">
+          <span>财富</span>
+          <span>钱啊钱啊钱</span>
+          <span>财富</span>
+        </div>
+        <p class="fS12 fC2">编辑领域</p>
+      </div>
+    </div>
+    <div class="edit_wrap pr15 borderl" id="sex">
+      <div class="flexr edit_item pt15 pb15">
+        <p class="lab">性别</p>
+        <p class="val ellipsis">男</p>
+      </div>
+    </div>
+    <div class="edit_wrap pr15 borderl"  id="datePicker">
+      <div class="flexr edit_item pt15 pb15">
+        <p class="lab">生日</p>
+        <p class="val ellipsis">1998-10-22</p>
+      </div>
+    </div>
+    <div class="edit_wrap pr15 borderl">
+      <div class="flexr edit_item pt15 pb15">
+        <p class="lab">邮箱</p>
+        <p class="val ellipsis">1419184713@qq.com</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div class="eval_alert">
+  <div class="alert_bg"></div>
+  <div class="eval_alert_wrap">
+    <div class="flexr pl15 pr15">
+      <p class="pt20 pb10 fS14 fC1">背景图更换</p>
+      <a href="javascript:void(0);" class="sure_img block pt20 pb10 fS14 fCStr" style="flex: 1;text-align: right;">完成</a>
+    </div>
+    <div class="flexr pl15 img_list_input pb15">
+      <div class="img_item_input" data-src="图片地址" style="background-image: url(../assets/images/new/user_head.jpg);background-position: center center;background-repeat: no-repeat;background-size: cover;">
+        <i></i>
+      </div>
+      <div class="img_item_input" data-src="图片地址" style="background-image: url(../assets/images/new/user_head.jpg);background-position: center center;background-repeat: no-repeat;background-size: cover;">
+        <i></i>
+      </div>
+      <div class="img_item_input" data-src="图片地址" style="background-image: url(../assets/images/new/user_head.jpg);background-position: center center;background-repeat: no-repeat;background-size: cover;">
+        <i></i>
+      </div>
+    </div>
+    <div class="pl15">
+      <div class="bordert pt10 pb10 pr15">
+        <label class="fS12 fC1 arr_icon">从手机相册选项<input type="file" accept="image/*" name=""></label>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+<script src="../assets/js/jquery.js"></script>
+<script src="../assets/js/weui.min.js"></script>
+<script>
+  $(function(){
+    //更换头像
+    $("#avatar").on("change","input.file",function(){
+      var el = $(this);
+      var file = this.files[0];
+
+      var URL = window.URL || window.webkitURL;
+      
+      var imgURL = URL.createObjectURL(file);
+
+      var reader =new FileReader();
+
+      var base64 = "";
+
+      reader.readAsDataURL(file);
+
+      reader.onload=function(){
+        //this.result: 转化的base
+        base64 = this.result;
+        el.siblings(".val").val(base64).siblings(".avatar").attr("src",imgURL);
+      }
+    });
+
+    // 选择性别
+    $("#sex").click(function(){
+      weui.picker([{
+              label: '男',
+              value: 1,
+            },{
+              label: '女',
+              value: 2,
+            }],{
+              onConfirm:function(res){
+                console.log(res);
+                $("#sex").find(".val").html(res[0].label).attr("data-val",res[0].value);
+              }
+            })
+    });
+
+    //选择生日
+    $("#datePicker").click(function(){
+      weui.datePicker({
+        start: '1918-1-1',
+        end: '2019-1-1',
+        defaultValue: [2000, 1, 1],
+        class:'datePicker',
+        onChange: function(result) {
+        },
+        onConfirm: function(result) {
+          console.log(result);
+            //点击确认
+            //alert(result[0].label + " " + result[1].label + " " + result[2].label);
+            $("#datePicker").find(".val").html(result[0].value + "-" + result[1].value + "-" + result[2].value)
+        },
+        id: 'datePicker',
+      });
+    });
+
+
+    //展开图片选择
+    $(".edit_head .img_warp .img_btn").click(function(){
+      $(".eval_alert").addClass("active");
+    })
+
+    // 选中图片
+    $(".eval_alert .eval_alert_wrap .img_list_input").on("click",".img_item_input",function(){
+      $(this).addClass("active").siblings(".active").removeClass("active");
+    });
+
+    // 上传图片js
+    $(".eval_alert .eval_alert_wrap .arr_icon").on("change","input",function(){
+
+      var file = this.files[0];
+
+      var URL = window.URL || window.webkitURL;
+      
+      var imgURL = URL.createObjectURL(file);
+
+      var reader =new FileReader();
+
+      var base64 = "";
+
+      reader.readAsDataURL(file);
+
+      reader.onload=function(){
+        //this.result: 转化的base
+        base64 = this.result;
+
+      }
+
+      //此处用的imgURL(图片地址)是调用浏览器接口返回的，需要换成后台返回的真是url
+      var html = '<div class="img_item_input active" data-src="'+ imgURL +'" style="background-image: url('+ imgURL +');background-position: center center;background-repeat: no-repeat;background-size: cover;"><i></i></div>';
+      $(".eval_alert .eval_alert_wrap .img_list_input .img_item_input").removeClass("active");
+      $(".eval_alert .eval_alert_wrap .img_list_input").prepend(html);
+    });
+      
+    // 完成图片选择
+    $(".eval_alert .eval_alert_wrap .sure_img").click(function(){
+      var src = $(".eval_alert .eval_alert_wrap .img_list_input .img_item_input.active").attr("data-src");
+      alert("选择的图片:"+ src);
+      $(".eval_alert").removeClass("active");
+    });
+  });
+</script>
+</html>

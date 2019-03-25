@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+      }
+
+      .cls-1 {
+        stroke: #929fad;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <g id="组_1941" data-name="组 1941" transform="translate(-152 -1376)">
+    <g id="Orion_reload" transform="translate(152.126 1372)">
+      <path id="layer1" class="cls-1" d="M25.985,28.14a6.08,6.08,0,0,1-10.332,5.055" transform="translate(-10.044 -14.817)"/>
+      <path id="layer2" class="cls-1" d="M8.955,14.772A6.08,6.08,0,0,1,19.294,9.779" transform="translate(-5.088 0)"/>
+      <path id="layer2-2" data-name="layer2" class="cls-1" d="M2,24l1.867,2.543,2.362-2.014" transform="translate(0 -11.771)"/>
+      <path id="layer1-2" data-name="layer1" class="cls-1" d="M50.229,30.746,48.31,28.14,46,30.218" transform="translate(-32.37 -14.817)"/>
+    </g>
+    <rect id="矩形_2282" data-name="矩形 2282" class="cls-2" width="20" height="20" transform="translate(152 1376)"/>
+  </g>
+</svg>

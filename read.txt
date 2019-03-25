@@ -1,0 +1,15 @@
+12/26 以下文件有修改有修改
+member/assets/js/wordList.js
+member/homepage/jigou_user_mana.html
+member/homepage/jigou_user_sale.html
+member/user/user_list.html
+member/user/user_list_mana.html
+member/user/user_list_sale.html
+
+
+12/27 修改情况
+添加
+shop/tips/*						页面提示
+member/score/*        评分
+对css文件有修改,如果没有改动css文件，可直接覆盖之前的css文件
+

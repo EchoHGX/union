@@ -1,0 +1,252 @@
+@charset "UTF-8";
+/*
+*	手机端公用样式 变量
+*/
+/*
+*	字体颜色定义
+*/
+/*
+*	字体大小定义
+*/
+.usi_header {
+  width: 100%;
+  position: relative;
+  background: #fff;
+  height: 1.963rem; }
+  .usi_header .middle {
+    width: 100%;
+    text-align: center;
+    line-height: 1.963rem;
+    font-size: .683rem;
+    color: #121C33; }
+  .usi_header .left {
+    display: block;
+    position: absolute;
+    left: .64rem;
+    color: #121C33;
+    font-size: .512rem;
+    top: 0;
+    line-height: 1.963rem; }
+  .usi_header .right {
+    display: block;
+    position: absolute;
+    right: .64rem;
+    height: 1.963rem;
+    line-height: 1.963rem;
+    top: 0;
+    font-size: .512rem;
+    color: #121C33;
+    padding-left: 0.853rem;
+    background: url(../images/new/change.svg) left center no-repeat;
+    background-size: 0.683rem; }
+
+.usi_top {
+  width: 100%;
+  position: relative;
+  padding-left: 0.64rem;
+  padding-top: 0.853rem;
+  padding-bottom: 0.683rem; }
+  .usi_top:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    left: 0;
+    top: 0;
+    z-index: 0;
+    position: absolute; }
+  .usi_top .avatar {
+    display: block;
+    width: 1.877rem;
+    height: 1.877rem;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    z-index: 1; }
+    .usi_top .avatar img {
+      display: block;
+      width: 100%;
+      height: 100%; }
+  .usi_top .name {
+    font-size: .768rem;
+    color: #fff;
+    line-height: 1.067rem;
+    padding-left: 0.427rem;
+    position: relative;
+    z-index: 1; }
+  .usi_top .phone {
+    font-size: 0.512rem;
+    color: #999;
+    line-height: .725rem;
+    padding-left: 0.427rem;
+    position: relative;
+    z-index: 1; }
+  .usi_top .go_homepage {
+    position: absolute;
+    right: 0;
+    width: 3.84rem;
+    height: 1.28rem;
+    display: block;
+    background: linear-gradient(270deg, #3963c4 0%, #4cbbec 100%);
+    border-radius: 100px 0 0 100px;
+    overflow: hidden;
+    font-size: 0.512rem;
+    color: #fff;
+    line-height: 1.28rem; }
+    .usi_top .go_homepage p {
+      width: 100%;
+      height: 100%;
+      background: url(../images/new/homepage.png) 0.427rem center no-repeat;
+      background-size: .597rem;
+      padding-left: 1.28rem; }
+
+.usi_tab {
+  width: 100%;
+  height: 2.987rem;
+  justify-content: space-around;
+  background: #fff;
+  align-items: center; }
+  .usi_tab a {
+    display: block;
+    position: relative;
+    color: #121C33; }
+    .usi_tab a.hasmsg span {
+      display: block; }
+    .usi_tab a span {
+      display: none;
+      position: absolute;
+      padding: 0 0.256rem;
+      line-height: 0.768rem;
+      background: #E1473B;
+      color: #fff;
+      font-size: 0.427rem;
+      border-radius: 100px;
+      left: 70%;
+      top: -0.427rem; }
+    .usi_tab a p:nth-of-type(1) {
+      font-size: 0.683rem;
+      text-align: center; }
+    .usi_tab a p:nth-of-type(2) {
+      font-size: 0.512rem;
+      text-align: center; }
+
+.usi_nav {
+  width: 100%;
+  margin-top: 0.427rem;
+  justify-content: space-around;
+  align-items: center;
+  height: 3.413rem;
+  background: #fff; }
+  .usi_nav a {
+    display: block;
+    font-size: 0.597rem;
+    color: #121C33;
+    text-align: center; }
+    .usi_nav a img {
+      width: 0.939rem; }
+    .usi_nav a p {
+      margin-top: 0.256rem; }
+
+.usi_menu {
+  background: #fff;
+  margin-top: 0.427rem;
+  padding-left: .64rem; }
+  .usi_menu a {
+    width: 100%;
+    border-bottom: 1px solid #F8F8F8;
+    padding-right: .64rem;
+    height: 2.219rem; }
+    .usi_menu a p {
+      line-height: 2.219rem; }
+      .usi_menu a p:nth-of-type(1) {
+        padding-left: 1.109rem;
+        font-size: 0.597rem;
+        color: #333; }
+      .usi_menu a p:nth-of-type(2) {
+        flex: 1;
+        text-align: right;
+        background: url(../images/new/right.png) right center no-repeat;
+        background-size: .597rem;
+        padding-right: 1.024rem;
+        font-size: 0.512rem;
+        color: #929FAD; }
+    .usi_menu a:nth-last-of-type(1) {
+      border-bottom: 0; }
+
+.usi_swiper {
+  background: #fff;
+  margin-top: 0.427rem;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 4.267rem; }
+  .usi_swiper a {
+    display: block;
+    width: 100%;
+    height: 100%; }
+    .usi_swiper a img {
+      display: block;
+      width: 100%;
+      height: 100%; }
+  .usi_swiper .swiper-pagination-bullet {
+    width: 0.427rem;
+    height: 0.128rem;
+    opacity: 1;
+    border-radius: 100px;
+    background: #fff; }
+  .usi_swiper .swiper-pagination-bullet-active {
+    background: #387BE6; }
+
+.usi_recom_list {
+  background: #fff;
+  margin-top: .427rem;
+  padding-top: 0.683rem;
+  padding-left: .64rem;
+  padding-right: .64rem; }
+  .usi_recom_list .title {
+    font-size: 0.683rem;
+    color: #121C33;
+    font-weight: bold;
+    padding-left: 0.427rem;
+    position: relative;
+    align-items: center; }
+    .usi_recom_list .title i {
+      display: block;
+      width: .171rem;
+      height: .597rem;
+      background: #387BE6;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%); }
+    .usi_recom_list .title span {
+      padding-left: 0.213rem;
+      font-size: 0.512rem;
+      color: #929FAD; }
+  .usi_recom_list .recom_list {
+    width: 100%;
+    padding-bottom: 0.427rem; }
+    .usi_recom_list .recom_list a {
+      display: block;
+      width: 7.168rem;
+      float: left;
+      margin-top: .427rem; }
+      .usi_recom_list .recom_list a:nth-of-type(2n) {
+        float: right; }
+      .usi_recom_list .recom_list a .name {
+        font-size: 0.512rem;
+        color: #121C33;
+        line-height: 0.725rem;
+        margin-top: 0.256rem; }
+      .usi_recom_list .recom_list a .desc {
+        font-size: 0.427rem;
+        color: #929FAD;
+        line-height: 0.597rem;
+        margin-top: 0.171rem; }
+      .usi_recom_list .recom_list a img {
+        display: block;
+        width: 100%;
+        height: 3.84rem; }
+
+/*# sourceMappingURL=user_index.css.map */

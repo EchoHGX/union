@@ -1,0 +1,209 @@
+@charset "UTF-8";
+
+/*
+*		首页样式
+*/
+@import "params.scss";
+
+.i_head{
+	width: 100%;
+	height: 46px;
+	background: #fff;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 666;
+	.head_left{
+		position: relative;
+		width: 80px;
+		height: 46px;
+		text-align: center;
+		line-height: 46px;
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		   -moz-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		span{
+			display:  block;
+		}
+		i{
+			display:  block;
+			width: 16px;
+			height: 46px;
+			background: url(../images/arr_down.png) center center no-repeat;
+			background-size: 100%;
+		}
+	}
+	.head_midder{
+		-webkit-box-flex: 1;
+		-webkit-flex: 1;
+		   -moz-box-flex: 1;
+		    -ms-flex: 1;
+		        flex: 1;
+		border-radius: 500px;
+		color: $fC2;
+		font-size: 12px;
+		height: 32px;
+		margin-top: 7px;
+		line-height: 32px;
+		padding-left: 40px;
+		background: $cBgInput url(../images/search.png) 15px center no-repeat;
+		background-size: 15px;
+	}
+	.head_right{
+		display: block;
+		width: 90px;
+		height: 32px;
+		background: -webkit-gradient(linear,right top, left top,from(rgba(56,123,230,1)),to(rgba(124,88,166,1)));
+		background: linear-gradient(270deg,rgba(56,123,230,1) 0%,rgba(124,88,166,1) 100%);
+		border-radius: 500px;
+		text-align: center;
+		font-size: 12px;
+		text-align: center;
+		margin-top: 7px;
+		margin-left: 20px;
+		margin-right: 15px;
+		color: #fff;
+		line-height: 32px;
+	}
+}
+
+
+.i_swiper{
+	width: 100%;
+	height: 8.32rem;
+	position: relative;
+	overflow: hidden;
+	.swiper-slide{
+		width: 100%;
+		padding: .427rem .64rem .981rem;
+		a{
+			display: block;
+			width: 100%;
+			height: 100%;
+			background:-webkit-gradient(linear,right top, left top,from(rgba(60,95,200,1)),to(rgba(123,87,168,1)));
+			background:linear-gradient(270deg,rgba(60,95,200,1) 0%,rgba(123,87,168,1) 100%);
+			-webkit-box-shadow:0px 10px 15px rgba(56,123,230,0.2);
+			        box-shadow:0px 10px 15px rgba(56,123,230,0.2);
+			border-radius: .256rem;
+		}
+		img{
+			width: 100%;
+			height: 100%;
+			border-radius: .256rem;
+		}
+	}
+	.swiper-pagination{
+		bottom: 0 !important;
+	}
+}
+
+.mess_wrap{
+	width: 92%;
+	height: 1.451rem;
+	line-height: 1.451rem;
+	overflow: hidden;
+	margin: 0 auto;
+	background: $cBgInput;
+	.label{
+		width: 2.048rem;
+		line-height: 1.451rem;
+		text-align: center;
+		font-size: 14px;
+		color: $fC2;
+		min-width: 2.048rem;
+	}
+	.mess_list{
+		-webkit-box-flex: 1;
+		-webkit-flex: 1;
+		   -moz-box-flex: 1;
+		    -ms-flex: 1;
+		        flex: 1;
+		padding-right: .853rem;
+		max-width: 11.947rem;
+		-webkit-transition: all .3s;
+		transition: all .3s;
+		li{
+			width: 100%;
+			line-height: 1.451rem;
+			font-size: 12px;
+		}
+	}
+}
+
+.menu_wrap{
+	width: 100%;
+	padding-bottom: 0.427rem;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	.menu_item{
+		display: block;
+		width: 20%;
+		text-align: center;
+		margin-top: .853rem;
+		margin-bottom: .427rem;
+		img{
+			width: 1.451rem;
+			height: 1.451rem;
+			border-radius: .427rem;
+		}
+		p{
+			width: 100%;
+			text-align: center;
+			line-height: .725rem;
+			margin-top: .427rem;
+			font-size: .512rem;
+		}
+	}
+}
+
+
+.tipe_alert{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	display: none;
+	.bg{
+		width: 100%;
+		height: 100%;
+		position: relative;
+		background: rgba(0,0,0,.4);
+		z-index: 5;
+	}
+	.cont{
+		width: 11.093rem;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%,-50%);
+		        transform: translate(-50%,-50%);
+		border-radius: .256rem;
+		background: #fff;
+		z-index: 6;
+		img{
+			width: 8.448rem;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 1.707rem;
+		}
+		.tipz{
+			margin-top: 2.048rem;
+			padding-bottom: .853rem;
+			text-align: center;
+		}
+		.btn_k{
+			display: block;
+			width: 100%;
+			height: 2.56rem;
+			line-height: 2.56rem;
+			text-align: center;
+			color: $fCStr;
+		}
+	}
+}
